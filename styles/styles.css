@@ -220,3 +220,39 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li,
+a,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #f6f6f6;
+}
+footer .copyright {
+  text-align: center;
+  padding: 10px 0px;
+}
