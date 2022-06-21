@@ -1,0 +1,84 @@
+// Skip link to skip to main content, hidden unless focused
+.skip-link {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    font-family: $body-font, sans-serif;
+    background-color: $black;
+    color: $white;
+    // z-index: 10;
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
+// Header base
+
+header {
+    background-color: $dark-green;
+}
+
+// Navigation
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    .logo {
+        font-family: $heading-font, cursive;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.0625rem;
+        font-size: 2.625rem;
+    }
+    li:first-child a {
+        color: $accent;
+    }
+    li a:hover {
+        color: $accent;
+        transition: 0.3s;
+    }
+}
+
+// Hero
+
+.hero {
+    h1 {
+    font-size: 7rem;
+    position: relative;
+    right: 11%;
+    margin: 0;
+    img {
+        position: absolute;
+        top: 14rem;
+        left: 20rem;
+    }
+    }
+}
+
+.portrait {
+    position: absolute;
+    top: 7rem;
+    right: 20rem;
+    display: inline-block;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 1.5rem;
+        top: 1.5rem;
+        background-color: white;
+        width: 100%;
+        height: 95%;
+        z-index: 10;
+    }
+    img {
+        position: relative;
+        z-index: 20;
+    }
+}
+

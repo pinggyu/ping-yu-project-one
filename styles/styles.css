@@ -221,71 +221,62 @@ template {
   overflow: hidden;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+.more-button {
   font-family: "Abril Fatface", cursive;
   font-weight: normal;
-  font-size: 80px;
   text-transform: uppercase;
-  line-height: 92px;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5.75;
   color: #f6f6f6;
 }
 
 h2 {
-  font-family: "Abril Fatface", cursive;
-  font-weight: normal;
-  font-size: 42px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 2.625rem;
   color: #1f1f1f;
 }
 
 h3 {
-  font-family: "Abril Fatface", cursive;
-  font-weight: normal;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 2rem;
   color: #1f1f1f;
 }
 
 h4 {
-  font-family: "Abril Fatface", cursive;
-  font-weight: normal;
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
   color: #1f1f1f;
 }
 
 .nav-links a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 20px;
   text-transform: uppercase;
+  font-size: 1.25rem;
   text-align: right;
-  line-height: 29px;
-  letter-spacing: 1px;
+  line-height: 1.8125;
+  letter-spacing: 0.0625rem;
   color: #f6f6f6;
 }
 
 .more-button {
-  font-family: "Abril Fatface", cursive;
-  font-weight: regular;
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 1.25rem;
   text-align: center;
-  line-height: 32px;
-  letter-spacing: 1px;
+  line-height: 2rem;
   color: #1f1f1f;
 }
 
-p {
+body {
   font-family: "Montserrat", sans-serif;
-  font-weight: regular;
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 1.25rem;
   text-align: center;
-  line-height: 32px;
+  line-height: 2rem;
   letter-spacing: 0px;
   color: #1f1f1f;
 }
@@ -317,11 +308,98 @@ p {
   padding: 0;
 }
 
-footer {
+.skip-link {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  font-family: "Montserrat", sans-serif;
   background-color: #1f1f1f;
   color: #f6f6f6;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.skip-link:focus {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+header {
+  background-color: #345231;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+.nav-links .logo {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  font-size: 2.625rem;
+}
+.nav-links li:first-child a {
+  color: #e4a436;
+}
+.nav-links li a:hover {
+  color: #e4a436;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hero h1 {
+  font-size: 7rem;
+  position: relative;
+  right: 11%;
+  margin: 0;
+}
+.hero h1 img {
+  position: absolute;
+  top: 14rem;
+  left: 20rem;
+}
+
+.portrait {
+  position: absolute;
+  top: 7rem;
+  right: 20rem;
+  display: inline-block;
+}
+.portrait::after {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  background-color: white;
+  width: 100%;
+  height: 95%;
+  z-index: 10;
+}
+.portrait img {
+  position: relative;
+  z-index: 20;
+}
+
+footer {
+  background-color: #1f1f1f;
 }
 footer .copyright {
   text-align: center;
   padding: 10px 0px;
+  color: #f6f6f6;
+  font-family: "Montserrat", sans-serif;
 }

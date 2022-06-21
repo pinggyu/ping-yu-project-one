@@ -1,8 +1,9 @@
 footer {
     background-color: $black;
-    color: $white;
     .copyright {
         text-align: center;
         padding: 10px 0px;
+        color: $white;
+        font-family: $body-font, sans-serif;
     }
 }
