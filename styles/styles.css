@@ -361,22 +361,26 @@ header {
   transition: 0.3s;
 }
 
-.hero h1 {
-  font-size: 7rem;
+.hero {
   position: relative;
-  right: 11%;
+}
+.hero h1 {
+  font-size: 9rem;
+  position: relative;
+  right: 18%;
+  line-height: 4.75;
   margin: 0;
 }
 .hero h1 img {
   position: absolute;
-  top: 14rem;
-  left: 20rem;
+  top: 15rem;
+  left: 16rem;
 }
 
 .portrait {
   position: absolute;
-  top: 7rem;
-  right: 20rem;
+  top: 3rem;
+  right: 1rem;
   display: inline-block;
 }
 .portrait::after {
