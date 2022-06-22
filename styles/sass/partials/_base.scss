@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-.more-button {
+.more-button, .submit-button {
     @include button-style;
 }
 

@@ -225,7 +225,8 @@ h1,
 h2,
 h3,
 h4,
-.more-button {
+.more-button,
+button {
   font-family: "Abril Fatface", cursive;
   font-weight: normal;
   text-transform: uppercase;
@@ -264,7 +265,7 @@ h4 {
   color: #f6f6f6;
 }
 
-.more-button {
+.more-button, button {
   font-size: 1.25rem;
   text-align: center;
   line-height: 2rem;
@@ -287,11 +288,12 @@ body {
   margin: 0 auto;
 }
 
-.more-button {
+.more-button, .submit-button {
   background-color: #e4a436;
   padding: 0.5rem 1rem;
+  border: none;
 }
-.more-button:hover, .more-button:focus {
+.more-button:hover, .more-button:focus, .submit-button:hover, .submit-button:focus {
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
   -webkit-transition: 0.3s;
@@ -619,4 +621,41 @@ footer p {
 
 .nav-contact li:last-child a {
   color: #e4a436;
+}
+
+.contact-main {
+  background-color: #f6f6f6;
+  padding: 6rem 0;
+}
+.contact-main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+.socials-info {
+  background-color: white;
+  text-align: left;
+  padding: 3rem;
+  width: 33.3333333333%;
+}
+.socials-info .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+.socials-info .social-icons i {
+  font-size: 1.5rem;
+  color: #345231;
+}
+.socials-info .email-link {
+  font-weight: 700;
+  color: #1f1f1f;
+}
+.socials-info .address {
+  font-style: normal;
+  padding-top: 1rem;
 }

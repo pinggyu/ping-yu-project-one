@@ -18,3 +18,36 @@
         color: $accent;
     }
 }
+
+.contact-main {
+    background-color: $white;
+    padding: 6rem 0;
+    .wrapper {
+        display: flex;
+        gap: 3rem;
+    }
+}
+
+.socials-info {
+    background-color: white;
+    text-align: left;
+    padding: 3rem;
+    width: calc(100%/3);
+    .social-icons {
+        display: flex;
+        gap: 2rem;
+        padding-bottom: 1rem;
+        i {
+            font-size: 1.5rem;
+            color: $dark-green;
+        }
+    }
+    .email-link {
+        font-weight: 700;
+        color: $black;
+    }
+    .address {
+        font-style: normal;
+        padding-top: 1rem;
+    }
+}
