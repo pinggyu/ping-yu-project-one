@@ -1,0 +1,25 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%*2/3);
+    gap: 1.5rem;
+    .name-email {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+input,
+textarea {
+    border: none;
+    font-family: $body-font, sans-serif;
+    width: 100%;
+}
+
+input {
+    padding: 1.5rem;
+}
+
+textarea {
+    padding: 2.5rem 1.5rem;
+}

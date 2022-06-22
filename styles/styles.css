@@ -441,6 +441,39 @@ footer p {
   margin: 0;
 }
 
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 66.6666666667%;
+  gap: 1.5rem;
+}
+.contact-form .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+input,
+textarea {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
+input {
+  padding: 1.5rem;
+}
+
+textarea {
+  padding: 2.5rem 1.5rem;
+}
+
 .about {
   background-color: #f6f6f6;
   padding: 7.5rem 0rem 10rem 0rem;
@@ -639,6 +672,7 @@ footer p {
   text-align: left;
   padding: 3rem;
   width: 33.3333333333%;
+  height: 20rem;
 }
 .socials-info .social-icons {
   display: -webkit-box;
