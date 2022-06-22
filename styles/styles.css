@@ -435,9 +435,6 @@ footer p {
   padding: 7.5rem 0rem 10rem 0rem;
 }
 
-.blogpost {
-  padding: 5rem 0rem;
-}
 .blogpost .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -446,7 +443,7 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
+  gap: 2.5rem;
 }
 
 .blog {
@@ -458,12 +455,15 @@ footer p {
 
 .blogpost-one .text-container {
   text-align: left;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 2rem;
 }
 .blogpost-one .img-container {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  top: -8rem;
+  bottom: 3rem;
   left: -0.6rem;
 }
 .blogpost-one .img-container img {
@@ -483,14 +483,13 @@ footer p {
 
 .blogpost-two .text-container {
   text-align: right;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  padding-top: 1.5rem;
 }
 .blogpost-two .img-container {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  bottom: -6.5rem;
+  top: 1.5rem;
   right: -0.6rem;
 }
 .blogpost-two .img-container img {
@@ -510,7 +509,7 @@ footer p {
 
 .story {
   background-color: #f6f6f6;
-  padding: 8rem 0rem 5rem 0rem;
+  padding: 8rem 0rem 6rem 0rem;
 }
 .story .wrapper {
   display: -webkit-box;

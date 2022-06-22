@@ -8,11 +8,11 @@
 // Blog posts section
 
 .blogpost{
-    padding: 5rem 0rem;
+    // padding: 3.5rem 0rem;
     .wrapper {
         display: flex;
         flex-direction: column;
-        position: relative;
+        gap: 2.5rem;
     }
 }
 
@@ -24,12 +24,14 @@
 .blogpost-one {
     .text-container {
         text-align: left;
-        // align-self: flex-end;
+        align-self: flex-end;
+        padding-bottom: 2rem;
     }
     .img-container {
         flex-shrink: 0;
         position: relative;
-        top: -8rem;
+        // top: -6.5rem;
+        bottom: 3rem;
         left: -0.6rem;
         img {
             position: relative;
@@ -52,12 +54,13 @@
 .blogpost-two {
     .text-container {
         text-align: right;
-        align-self: flex-end;
+        padding-top: 1.5rem;
     }
     .img-container {
         flex-shrink: 0;
         position: relative;
-        bottom: -6.5rem;
+        // bottom: -5rem;
+        top: 1.5rem;
         right: -0.6rem;
         img {
             position: relative;
@@ -81,7 +84,7 @@
 
 .story {
     background-color: $white;
-    padding: 8rem 0rem 5rem 0rem;
+    padding: 8rem 0rem 6rem 0rem;
     .wrapper {
         display: flex;
         gap: 7rem;
