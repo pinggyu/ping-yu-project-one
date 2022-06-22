@@ -102,3 +102,20 @@ header {
     }
 }
 
+// Pages
+
+
+.page-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+}
+
+.pages-header {
+    .wrapper {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+}

@@ -436,6 +436,19 @@ header {
   z-index: 20;
 }
 
+.page-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 35vh;
+}
+
+.pages-header .wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
 footer {
   background-color: #1f1f1f;
 }
@@ -647,17 +660,8 @@ textarea {
   padding: 1rem;
 }
 
-.contact-header .wrapper {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-}
-.contact-header .wrapper .page-cover {
+.contact-header .page-cover {
   background-image: url(../assets/contact-image-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 35vh;
 }
 
 .contact-main {
@@ -701,4 +705,8 @@ textarea {
 .socials-info .address {
   font-style: normal;
   padding-top: 1rem;
+}
+
+.blog-header .page-cover {
+  background-image: url(../assets/blog-image-1.jpg);
 }

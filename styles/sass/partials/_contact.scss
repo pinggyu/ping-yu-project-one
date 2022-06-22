@@ -1,16 +1,7 @@
 .contact-header {
-    .wrapper {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        .page-cover{
-        background-image: url(../assets/contact-image-1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 35vh;
-        }
-    } 
+    .page-cover{
+    background-image: url(../assets/contact-image-1.jpg);
+    }
 }
 
 .contact-main {
