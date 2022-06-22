@@ -391,6 +391,14 @@ header {
   color: #e4a436;
 }
 
+.nav-contact li:last-child a {
+  color: #e4a436;
+}
+
+.nav-blog li:nth-child(4) a {
+  color: #e4a436;
+}
+
 .home-hero {
   position: relative;
 }
@@ -650,10 +658,6 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   height: 35vh;
-}
-
-.nav-contact li:last-child a {
-  color: #e4a436;
 }
 
 .contact-main {

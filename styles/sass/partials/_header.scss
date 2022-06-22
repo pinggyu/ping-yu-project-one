@@ -47,8 +47,20 @@ header {
 
 .nav-home {
     li:first-child a {
-            color: $accent;
-       }
+        color: $accent;
+    }
+}
+
+.nav-contact {
+    li:last-child a {
+        color: $accent;
+    }
+}
+
+.nav-blog {
+    li:nth-child(4) a {
+        color: $accent;
+    }
 }
 
 // Hero
