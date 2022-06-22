@@ -41,6 +41,11 @@
         i {
             font-size: 1.5rem;
             color: $dark-green;
+            &:hover,
+            &:focus {
+                color: $accent;
+                transition: 0.3s;
+            }
         }
     }
     .email-link {
@@ -52,3 +57,4 @@
         padding-top: 1rem;
     }
 }
+

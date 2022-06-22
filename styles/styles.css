@@ -685,6 +685,11 @@ textarea {
   font-size: 1.5rem;
   color: #345231;
 }
+.socials-info .social-icons i:hover, .socials-info .social-icons i:focus {
+  color: #e4a436;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 .socials-info .email-link {
   font-weight: 700;
   color: #1f1f1f;
