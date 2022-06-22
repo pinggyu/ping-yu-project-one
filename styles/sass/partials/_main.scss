@@ -1,0 +1,46 @@
+// About section
+
+.about {
+    background-color: $white;
+    padding: 7.5rem 0rem 10rem 0rem;
+}
+
+// Blog posts section
+
+.blog {
+    display: flex;
+}
+
+// Story section
+
+.story {
+    background-color: $white;
+    padding: 8rem 0rem 5rem 0rem;
+    .wrapper {
+        display: flex;
+        gap: 8rem;
+    }
+    .text-container {
+        text-align: left;
+    }
+    .img-container {
+        flex-shrink: 0;
+        position: relative;
+        img {
+            position: relative;
+            z-index: 20;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            background-color: $light-green;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+    }
+}
+
+

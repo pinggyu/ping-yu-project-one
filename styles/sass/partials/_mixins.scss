@@ -1,0 +1,8 @@
+@mixin button-style {
+    background-color: $accent;
+    padding: 0.5rem 1rem;
+    &:hover {
+        filter: brightness(85%);
+        transition: 0.3s;
+    }
+}

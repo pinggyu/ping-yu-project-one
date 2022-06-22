@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+.more-button {
+    @include button-style;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -17,10 +21,18 @@ a {
     text-decoration: none;
 }
 
+p {
+    padding: 0.5rem 0rem 1rem 0rem;
+}
+
 ul,
 li,
 a,
-p {
+p
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
 }
