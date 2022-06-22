@@ -36,18 +36,24 @@ header {
         letter-spacing: 0.0625rem;
         font-size: 2.625rem;
     }
-    li:first-child a {
-        color: $accent;
-    }
-    li a:hover {
+    li a:hover, li a:focus {
         color: $accent;
         transition: 0.3s;
     }
+    li .logo:hover, li .logo:focus {
+        color: $white;
+    }
+}
+
+.nav-home {
+    li:first-child a {
+            color: $accent;
+       }
 }
 
 // Hero
 
-.hero {
+.home-hero {
     position: relative;
     h1 {
     font-size: 9rem;

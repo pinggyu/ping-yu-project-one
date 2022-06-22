@@ -318,7 +318,7 @@ p {
 ul,
 li,
 a,
-p h1,
+h1,
 h2,
 h3,
 h4 {
@@ -371,26 +371,30 @@ header {
   letter-spacing: 0.0625rem;
   font-size: 2.625rem;
 }
-.nav-links li:first-child a {
-  color: #e4a436;
-}
-.nav-links li a:hover {
+.nav-links li a:hover, .nav-links li a:focus {
   color: #e4a436;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.nav-links li .logo:hover, .nav-links li .logo:focus {
+  color: #f6f6f6;
+}
 
-.hero {
+.nav-home li:first-child a {
+  color: #e4a436;
+}
+
+.home-hero {
   position: relative;
 }
-.hero h1 {
+.home-hero h1 {
   font-size: 9rem;
   position: relative;
   right: 18%;
   line-height: 4.75;
   margin: 0;
 }
-.hero h1 img {
+.home-hero h1 img {
   position: absolute;
   top: 15rem;
   left: 16rem;
@@ -593,4 +597,21 @@ footer p {
   background: #e4a436;
   border-radius: 50%;
   padding: 1rem;
+}
+
+.contact-header .wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+.contact-header .wrapper .page-cover {
+  background-image: url(../assets/contact-image-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 35vh;
+}
+
+.nav-contact li:last-child a {
+  color: #e4a436;
 }
