@@ -291,7 +291,7 @@ body {
   background-color: #e4a436;
   padding: 0.5rem 1rem;
 }
-.more-button:hover {
+.more-button:hover, .more-button:focus {
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
   -webkit-transition: 0.3s;
@@ -338,7 +338,8 @@ h4 {
   font-family: "Montserrat", sans-serif;
   background-color: #1f1f1f;
   color: #f6f6f6;
-  height: 2rem;
+  z-index: 10;
+  height: 3rem;
   padding: 0.5rem;
 }
 
@@ -434,10 +435,77 @@ footer p {
   padding: 7.5rem 0rem 10rem 0rem;
 }
 
+.blogpost {
+  padding: 5rem 0rem;
+}
+.blogpost .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
 .blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 5rem;
+}
+
+.blogpost-one .text-container {
+  text-align: left;
+}
+.blogpost-one .img-container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  top: -8rem;
+  left: -0.6rem;
+}
+.blogpost-one .img-container img {
+  position: relative;
+  z-index: 20;
+}
+.blogpost-one .img-container::after {
+  content: "";
+  position: absolute;
+  right: -1.5rem;
+  top: 1.5rem;
+  background-color: #709b6b;
+  width: 200vh;
+  height: 100%;
+  z-index: 10;
+}
+
+.blogpost-two .text-container {
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.blogpost-two .img-container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  bottom: -6.5rem;
+  right: -0.6rem;
+}
+.blogpost-two .img-container img {
+  position: relative;
+  z-index: 20;
+}
+.blogpost-two .img-container::after {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  background-color: #345231;
+  width: 200vh;
+  height: 100%;
+  z-index: 10;
 }
 
 .story {
@@ -448,7 +516,7 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8rem;
+  gap: 7rem;
 }
 .story .text-container {
   text-align: left;
@@ -461,22 +529,23 @@ footer p {
 .story .img-container img {
   position: relative;
   z-index: 20;
+  width: 88%;
 }
 .story .img-container::after {
   content: "";
   position: absolute;
   left: 1.5rem;
-  top: 1.5rem;
+  top: 2.5rem;
   background-color: #709b6b;
-  width: 100%;
-  height: 100%;
+  width: 88%;
+  height: 88%;
   z-index: 10;
 }
 
 .full-photo {
-  height: 58vh;
+  height: 40vh;
   background-image: url(../assets/home-image-5.jpg);
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
