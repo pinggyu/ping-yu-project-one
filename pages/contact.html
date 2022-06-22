@@ -35,11 +35,56 @@
 
     <!-- MAIN section -->
     
-    <main>
+    <main class="contact-main">
+        <div class="wrapper">
+            <!-- Socials & Address section -->
+            <div class="socials-info">
+                <!-- icon container -->
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="facebook" aria-hidden="true"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <!-- for screen readers only -->
+                        <span class="sr-only">Link to Facebook</span>
+                    </a>
+                    <a href="#">
+                        <i class="twitter" aria-hidden="true"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <span class="sr-only">Link to Twitter</span>
+                    </a>
+                    <a href="#">
+                        <i class="pinterest" aria-hidden="true"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span class="sr-only">Link to LinkedIn</span>
+                    </a>
+                    <a href="#">
+                        <i class="insta" aria-hidden="true"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="sr-only">Link to Instagram</span>
+                    </a>
+                </div>
+                <a href="mailto:info@email.com">info@email.com</a>
+                <address>
+                    123 - 456 - 7890 <br>
+                    12 Queen Street West, Unit 10 <br>
+                    Toronto, Ontario <br>
+                    M5V2D5
+                </address>
+            </div>
+                <!-- Form -->
+                <form action="">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" placeholder="Name">
 
-        <!-- Socials & Contact section -->
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" placeholder="Email address">
 
-        <!-- Form -->
+                    <label for="message" class="sr-only">Message</label>
+                    <input type="message" id="message" placeholder="Message">
+
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+        </div>
         
     </main>
 
