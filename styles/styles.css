@@ -303,6 +303,7 @@ body {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 ul {
@@ -644,10 +645,7 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5rem 0rem;
-  gap: 2.5rem;
-}
-.slideshow img {
-  width: 100%;
+  gap: 1.5rem;
 }
 
 .features {
