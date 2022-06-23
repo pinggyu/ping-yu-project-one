@@ -3,3 +3,77 @@
         background-image: url(../assets/blog-image-1.jpg);
     }
 }
+
+.blog-main {
+    text-align: left;
+    .wrapper {
+        display: flex;
+        gap: 3rem;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .date-author {
+        margin: 1.5rem 0rem 1.5rem 0rem;
+    }
+}
+
+.content-box {
+    background-color: white;
+    padding: 2.5rem;
+}
+
+.recent-posts {
+    margin-top: 1.5rem;
+    ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+    }
+}
+
+.article, .comment-two {
+    border-bottom: 5px solid $light-green;
+}
+
+.blog-about {
+    h4 {
+        padding-top: 2rem;
+    }
+    a {
+        color: $light-green;
+        font-weight: 700;
+        &:hover{
+            color: $accent;
+        }
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.blog-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.comment-one {
+    margin-bottom: 1.5rem;
+}
+
+.comments {
+    .content-box {
+        display: flex;
+        gap: 1.5rem;
+        .img-container {
+            flex-shrink: 0;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

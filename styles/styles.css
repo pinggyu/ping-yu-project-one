@@ -676,11 +676,22 @@ textarea {
   gap: 3rem;
 }
 
+.side-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.page-content {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
 .socials-info {
   background-color: white;
   text-align: left;
   padding: 3rem;
-  width: 33.3333333333%;
   height: 20rem;
 }
 .socials-info .social-icons {
@@ -710,4 +721,85 @@ textarea {
 
 .blog-header .page-cover {
   background-image: url(../assets/blog-image-1.jpg);
+}
+
+.blog-main {
+  text-align: left;
+}
+.blog-main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+.blog-main p {
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+.blog-main .date-author {
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.content-box {
+  background-color: white;
+  padding: 2.5rem;
+}
+
+.recent-posts {
+  margin-top: 1.5rem;
+}
+.recent-posts ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+}
+
+.article, .comment-two {
+  border-bottom: 5px solid #709b6b;
+}
+
+.blog-about h4 {
+  padding-top: 2rem;
+}
+.blog-about a {
+  color: #709b6b;
+  font-weight: 700;
+}
+.blog-about a:hover {
+  color: #e4a436;
+}
+.blog-about img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.comment-one {
+  margin-bottom: 1.5rem;
+}
+
+.comments .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+.comments .content-box .img-container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.comments .content-box p {
+  margin: 0;
 }

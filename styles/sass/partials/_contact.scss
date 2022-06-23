@@ -11,11 +11,18 @@
     }
 }
 
+.side-content {
+    flex: 1;
+}
+
+.page-content {
+    flex: 2;
+}
+
 .socials-info {
     background-color: white;
     text-align: left;
     padding: 3rem;
-    width: calc(100%/3);
     height: 20rem;
     .social-icons {
         display: flex;
