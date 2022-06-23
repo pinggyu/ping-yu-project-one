@@ -443,40 +443,28 @@ header {
 }
 
 .home-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 .home-hero h1 {
-  font-size: 9rem;
-  position: relative;
-  right: 18%;
-  line-height: 4.75;
-  margin: 0;
+  font-size: 8vw;
 }
-.home-hero h1 .circle-text {
-  position: absolute;
-  top: 15rem;
-  left: 16rem;
-}
-
 .portrait {
-  position: absolute;
   top: 3rem;
   right: 1rem;
   display: inline-block;
 }
-.portrait::after {
-  content: "";
-  position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
 .portrait img {
-  position: relative;
-  z-index: 20;
+  -webkit-box-shadow: 1.5rem 1.5rem white;
+          box-shadow: 1.5rem 1.5rem white;
 }
 
 .page-cover {
@@ -602,7 +590,7 @@ textarea {
 
 .about {
   background-color: #f6f6f6;
-  padding: 10rem 0rem;
+  padding: 9rem 0rem 10rem 0rem;
 }
 
 .blogpost .wrapper {
@@ -701,7 +689,6 @@ textarea {
 }
 .story .img-container img {
   position: relative;
-  z-index: 20;
   width: 88%;
   -webkit-box-shadow: 1.5rem 1.5rem #709b6b;
           box-shadow: 1.5rem 1.5rem #709b6b;

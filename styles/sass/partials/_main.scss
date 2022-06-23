@@ -2,7 +2,7 @@
 
 .about {
     background-color: $white;
-    padding: 10rem 0rem;
+    padding: 9rem 0rem 10rem 0rem;
 }
 
 // Blog posts section
@@ -97,7 +97,6 @@
         position: relative;
         img {
             position: relative;
-            z-index: 20;
             width: 88%;
             box-shadow: 1.5rem 1.5rem $light-green;
         }
