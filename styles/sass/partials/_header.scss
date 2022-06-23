@@ -22,47 +22,6 @@ header {
     background-color: $dark-green;
 }
 
-// Navigation
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    .logo {
-        font-family: $heading-font, cursive;
-        font-weight: normal;
-        text-transform: uppercase;
-        letter-spacing: 0.0625rem;
-        font-size: 2.625rem;
-    }
-    li a:hover, li a:focus {
-        color: $accent;
-        transition: 0.3s;
-    }
-    li .logo:hover, li .logo:focus {
-        color: $white;
-    }
-}
-
-.nav-home {
-    li:first-child a {
-        color: $accent;
-    }
-}
-
-.nav-contact {
-    li:last-child a {
-        color: $accent;
-    }
-}
-
-.nav-blog {
-    li:nth-child(4) a {
-        color: $accent;
-    }
-}
-
 // Hero
 
 .home-hero {
