@@ -418,6 +418,7 @@ body {
 .skip-link {
   position: absolute;
   left: 10%;
+  top: -10%;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.3s;

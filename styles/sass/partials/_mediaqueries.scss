@@ -1,6 +1,5 @@
 // Breakpoints Main page: 
 // @1400px header
-// @1160 blogpost section
 // @900 hamburger home
 
 @media (max-width: 600px){
@@ -56,6 +55,9 @@
 }
 
 @media (max-width: 1160px) {
+
+    // HOME - Blogpost Section
+
     .blog {
         align-items: center;
     }
@@ -72,6 +74,12 @@
             margin: 3.5rem 0rem 6.5rem 0rem;
         }
     }
+}
+
+@media (max-width: 1400px) {
+
+    // HOME - Header Section
+
 }
 
 // Breakpoints Blog:
