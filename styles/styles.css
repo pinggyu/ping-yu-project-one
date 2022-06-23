@@ -455,6 +455,48 @@ textarea {
   padding: 2.5rem 1.5rem;
 }
 
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+.nav-links .logo {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  font-size: 2.625rem;
+}
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #e4a436;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav-links li .logo:hover,
+.nav-links li .logo:focus {
+  color: #f6f6f6;
+}
+
+.nav-home li:first-child a {
+  color: #e4a436;
+}
+
+.nav-contact li:last-child a {
+  color: #e4a436;
+}
+
+.nav-blog li:nth-child(4) a {
+  color: #e4a436;
+}
+
 .about {
   background-color: #f6f6f6;
   padding: 7.5rem 0rem 10rem 0rem;
