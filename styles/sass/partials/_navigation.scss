@@ -10,17 +10,17 @@
         text-transform: uppercase;
         letter-spacing: 0.0625rem;
         font-size: 2.625rem;
+        &:hover,
+        &:focus {
+            color: $white;
+        }
     }
-
-    li a:hover,
-    li a:focus {
-        color: $accent;
+    a {
         transition: 0.3s;
-    }
-
-    li .logo:hover,
-    li .logo:focus {
-        color: $white;
+        &:hover,
+        &:focus {
+            color: $accent;
+        }
     }
 }
 

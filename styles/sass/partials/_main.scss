@@ -2,7 +2,7 @@
 
 .about {
     background-color: $white;
-    padding: 7.5rem 0rem 10rem 0rem;
+    padding: 10rem 0rem;
 }
 
 // Blog posts section
@@ -116,7 +116,7 @@
 // Gallery section
 
 .full-photo {
-    height: 40vh;
+    height: 55vh;
     background-image: url(../assets/home-image-5.jpg);
     background-position: top;
     background-size: cover;
@@ -127,7 +127,10 @@
     display: flex;
     justify-content: space-between;
     padding: 5rem 0rem;
-    gap: 2rem;
+    gap: 2.5rem;
+    img {
+        width: 100%;
+    }
 }
 
 // Features section

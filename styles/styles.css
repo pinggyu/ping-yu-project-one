@@ -292,12 +292,12 @@ body {
   background-color: #e4a436;
   padding: 0.5rem 1rem;
   border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .more-button:hover, .more-button:focus, .submit-button:hover, .submit-button:focus {
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 img {
@@ -400,7 +400,25 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 35vh;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.page-cover h1 {
+  text-align: left;
+  padding-bottom: 1.9rem;
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 0;
 }
 
 .pages-header .wrapper {
@@ -431,6 +449,9 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
 }
 .contact-form .name-email {
   display: -webkit-box;
@@ -473,15 +494,15 @@ textarea {
   letter-spacing: 0.0625rem;
   font-size: 2.625rem;
 }
-.nav-links li a:hover,
-.nav-links li a:focus {
-  color: #e4a436;
+.nav-links .logo:hover, .nav-links .logo:focus {
+  color: #f6f6f6;
+}
+.nav-links a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.nav-links li .logo:hover,
-.nav-links li .logo:focus {
-  color: #f6f6f6;
+.nav-links a:hover, .nav-links a:focus {
+  color: #e4a436;
 }
 
 .nav-home li:first-child a {
@@ -498,7 +519,7 @@ textarea {
 
 .about {
   background-color: #f6f6f6;
-  padding: 7.5rem 0rem 10rem 0rem;
+  padding: 10rem 0rem;
 }
 
 .blogpost .wrapper {
@@ -608,7 +629,7 @@ textarea {
 }
 
 .full-photo {
-  height: 40vh;
+  height: 55vh;
   background-image: url(../assets/home-image-5.jpg);
   background-position: top;
   background-size: cover;
@@ -623,7 +644,10 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5rem 0rem;
-  gap: 2rem;
+  gap: 2.5rem;
+}
+.slideshow img {
+  width: 100%;
 }
 
 .features {
@@ -677,18 +701,6 @@ textarea {
   gap: 3rem;
 }
 
-.side-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.page-content {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
 .socials-info {
   background-color: white;
   text-align: left;
@@ -705,11 +717,11 @@ textarea {
 .socials-info .social-icons i {
   font-size: 1.5rem;
   color: #345231;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .socials-info .social-icons i:hover, .socials-info .social-icons i:focus {
   color: #e4a436;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 .socials-info .email-link {
   font-weight: 700;
@@ -766,6 +778,8 @@ textarea {
 .blog-about a {
   color: #709b6b;
   font-weight: 700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .blog-about a:hover {
   color: #e4a436;
@@ -774,6 +788,12 @@ textarea {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.side-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .blog-body {
@@ -785,6 +805,9 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3rem;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .comment-one {

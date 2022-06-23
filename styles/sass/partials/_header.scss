@@ -68,7 +68,18 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 35vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1 {
+        text-align: left;
+        padding-bottom: 1.9rem;
+        max-width: 1260px;
+        width: 90%;
+        margin: 0 auto;
+        line-height: 0;
+    }
 }
 
 .pages-header {

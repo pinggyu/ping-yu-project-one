@@ -45,6 +45,7 @@
     a {
         color: $light-green;
         font-weight: 700;
+        transition: 0.3s;
         &:hover{
             color: $accent;
         }
@@ -55,10 +56,15 @@
     }
 }
 
+.side-content {
+    flex: 1;
+}
+
 .blog-body {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    flex: 2;
 }
 
 .comment-one {

@@ -2,8 +2,8 @@
     background-color: $accent;
     padding: 0.5rem 1rem;
     border: none;
+    transition: 0.3s;
     &:hover, &:focus {
         filter: brightness(85%);
-        transition: 0.3s;
     }
 }
