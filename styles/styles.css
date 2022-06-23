@@ -694,6 +694,9 @@ textarea {
   background-image: url(../assets/contact-image-1.jpg);
 }
 
+.contact-main {
+  height: 61vh;
+}
 .contact-main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -730,6 +733,20 @@ textarea {
 .socials-info .address {
   font-style: normal;
   padding-top: 1rem;
+}
+
+.contact-page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
 }
 
 .blog-header .page-cover {
