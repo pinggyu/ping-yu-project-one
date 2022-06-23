@@ -430,7 +430,6 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 66.6666666667%;
   gap: 1.5rem;
 }
 .contact-form .name-email {
