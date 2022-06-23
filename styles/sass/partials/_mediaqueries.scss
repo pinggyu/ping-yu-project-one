@@ -1,7 +1,78 @@
 // Breakpoints Main page: 
 // @1400px header
 // @1160 blogpost section
-// @900 willow's journey, hamburger, features, gallery
+// @900 hamburger home
+
+@media (max-width: 600px){
+
+    // HOME - Gallery Section
+
+    .slideshow {
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    // HOME - Story Section
+
+    .story {
+        .wrapper {
+            flex-direction: column;
+            .img-container {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 15%;
+                img {
+                    width: auto;
+                }
+            }
+            .text-container {
+                text-align: center;
+            }
+        }
+    }    
+
+    // HOME - Features Section
+
+    .features {
+            .feature-list {
+                flex-direction: column;
+                text-align: center;
+                p {
+                    padding: 0;
+                }
+                .category-name {
+                    justify-content: center;
+                }
+                .feature-item {
+                    width: 100%;
+                }
+            }
+        }
+}
+
+@media (max-width: 1160px) {
+    .blog {
+        align-items: center;
+    }
+    .blogpost-one {
+        flex-direction: column;
+        .text-container {
+            text-align: center;
+        }  
+    }
+    .blogpost-two {
+        flex-direction: column-reverse;
+        .text-container {
+            text-align: center;
+            margin: 3.5rem 0rem 6.5rem 0rem;
+        }
+    }
+}
 
 // Breakpoints Blog:
 // @900 hamburger, flex direction column everything
