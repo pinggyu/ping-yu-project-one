@@ -1,5 +1,4 @@
 // Breakpoints Main page: 
-// @1400px header
 // @900 hamburger home
 
 @media (max-width: 600px){
@@ -10,6 +9,15 @@
         flex-direction: column;
         img {
             width: 100%;
+        }
+    }
+
+    .pages-header {
+        .page-cover {
+            h1 {
+                line-height: 1;
+                text-align: center;
+            }
         }
     }
 }
@@ -38,20 +46,34 @@
     // HOME - Features Section
 
     .features {
-            .feature-list {
-                flex-direction: column;
-                text-align: center;
-                p {
-                    padding: 0;
-                }
-                .category-name {
-                    justify-content: center;
-                }
-                .feature-item {
-                    width: 100%;
-                }
+        .feature-list {
+            flex-direction: column;
+            text-align: center;
+            p {
+                padding: 0;
+            }
+            .category-name {
+                justify-content: center;
+            }
+            .feature-item {
+                width: 100%;
             }
         }
+    }
+
+    // CONTACT/ BLOG pages
+
+    .page-main {
+        .wrapper {
+            flex-direction: column-reverse;
+        }
+        .socials-info {
+            text-align: center;
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    }
 }
 
 @media (max-width: 1160px) {
