@@ -27,29 +27,32 @@ header {
 
 .home-hero {
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
+    .header-title {
+        display: flex;
+        align-items: center;
+    }
     h1 {
-    font-size: 8vw;
-    // position: relative;
-    // right: 18%;
-    // line-height: 4.75;
-    // margin: 0;
-    // .circle-text {
-    //     // position: absolute;
-    //     // top: 15rem;
-    //     // left: 16rem;
-    // }
+    // using clamp to make the header font more fluid and responsive
+        font-size: clamp(4rem,9vw,9rem);
+        line-height: 0;
+        position: relative;
+        right: 9%;
+    }
+    .circle-text {
+        position: relative;
+        bottom: 1rem;
+        width: clamp(4rem, 9vw, 8rem);
     }
 }
 
 .portrait {
-    top: 3rem;
-    right: 1rem;
-    display: inline-block;
+    position: relative;
+    top: 4rem;
+    right: 2%;
+    width: clamp(5rem, 29vw, 34rem);
     img {
-        // position: absolute;
         box-shadow: 1.5rem 1.5rem white;
     }
 }

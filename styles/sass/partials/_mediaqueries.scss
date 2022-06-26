@@ -24,6 +24,45 @@
 
 @media (max-width: 900px) {
 
+    // HOME - Header Section
+
+    // set min header height
+
+    header {
+        height: 441.91px;
+        background-image: url(../assets/home-image-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
+
+        .portrait {
+            display: none;
+        }
+
+        .circle-text {
+            display: none;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            .home-hero {
+                h1 {
+                    right: 0%;
+                }
+            }
+        }
+    }
+
+    // hide desktop nav
+
+    .main-nav {
+        display: none;
+    }
+    
     // HOME - Story Section
 
     .story {
@@ -98,14 +137,15 @@
     }
 }
 
-@media (max-width: 1400px) {
-
-    // HOME - Header Section
-
+@media (min-width: 1700px) {
+    // limit the size of the header for bigger screen sizes to respect design requirements
+    header{
+        height: 776.13px;
+    }
 }
 
 // Breakpoints Blog:
-// @900 hamburger, flex direction column everything
+// @900 hamburger
 
 // Breakpoints Contact:
-// @900 hamburger, flex direction column everything
+// @900 hamburger

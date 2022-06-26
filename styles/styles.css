@@ -299,6 +299,41 @@ body {
   }
 }
 @media (max-width: 900px) {
+  header {
+    height: 441.91px;
+    background-image: url(../assets/home-image-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  }
+  header .portrait {
+    display: none;
+  }
+  header .circle-text {
+    display: none;
+  }
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  header .wrapper .home-hero h1 {
+    right: 0%;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
   .story .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -381,6 +416,11 @@ body {
   .blogpost-two .text-container {
     text-align: center;
     margin: 3.5rem 0rem 6.5rem 0rem;
+  }
+}
+@media (min-width: 1700px) {
+  header {
+    height: 776.13px;
   }
 }
 .wrapper {
@@ -466,22 +506,36 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
 }
+.home-hero .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .home-hero h1 {
-  font-size: 8vw;
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0;
+  position: relative;
+  right: 9%;
+}
+.home-hero .circle-text {
+  position: relative;
+  bottom: 1rem;
+  width: clamp(4rem, 9vw, 8rem);
 }
 
 .portrait {
-  top: 3rem;
-  right: 1rem;
-  display: inline-block;
+  position: relative;
+  top: 4rem;
+  right: 2%;
+  width: clamp(5rem, 29vw, 34rem);
 }
 .portrait img {
   -webkit-box-shadow: 1.5rem 1.5rem white;
