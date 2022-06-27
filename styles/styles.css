@@ -242,6 +242,7 @@ h1 {
 h2 {
   font-size: 2.625rem;
   color: #1f1f1f;
+  line-height: 1;
 }
 
 h3 {
@@ -299,7 +300,7 @@ body {
   }
 }
 @media (max-width: 900px) {
-  header {
+  .home-header {
     height: 441.91px;
     background-image: url(../assets/home-image-1.jpg);
     background-position: center;
@@ -308,16 +309,20 @@ body {
     -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
             box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
   }
-  header .portrait {
+  .home-header .portrait {
     display: none;
   }
-  header .circle-text {
+  .home-header .circle-text {
     display: none;
   }
-  header .wrapper {
+  .home-header .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -326,12 +331,16 @@ body {
             align-items: center;
     height: 100%;
   }
-  header .wrapper .home-hero h1 {
+  .home-header .wrapper .home-hero h1 {
     right: 0%;
   }
 
   .main-nav {
     display: none;
+  }
+
+  .home-header .side-nav, .pages-header .side-nav {
+    display: block;
   }
 
   .story .wrapper {
@@ -619,6 +628,52 @@ input {
 
 textarea {
   padding: 2.5rem 1.5rem;
+}
+
+.side-nav {
+  display: none;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+input[type=checkbox]:checked ~ .slide-out-nav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.menu-button {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 40;
+}
+.menu-button i {
+  color: #f6f6f6;
+  font-size: 2.5rem;
+}
+
+.slide-out-nav {
+  background-color: #709b6b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  opacity: 0.95;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+.slide-out-nav a {
+  font-size: 2rem;
 }
 
 .nav-links {

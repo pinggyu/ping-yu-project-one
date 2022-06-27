@@ -1,6 +1,3 @@
-// Breakpoints Main page: 
-// @900 hamburger home
-
 @media (max-width: 600px){
 
     // HOME - Gallery Section
@@ -23,12 +20,12 @@
 }
 
 @media (max-width: 900px) {
-
+    
     // HOME - Header Section
 
     // set min header height
 
-    header {
+    .home-header {
         height: 441.91px;
         background-image: url(../assets/home-image-1.jpg);
         background-position: center;
@@ -46,6 +43,7 @@
 
         .wrapper {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
@@ -62,6 +60,14 @@
     .main-nav {
         display: none;
     }
+
+    // show side nav
+
+    .home-header, .pages-header {
+        .side-nav {
+            display: block;
+        }
+    }   
     
     // HOME - Story Section
 
@@ -143,9 +149,3 @@
         height: 776.13px;
     }
 }
-
-// Breakpoints Blog:
-// @900 hamburger
-
-// Breakpoints Contact:
-// @900 hamburger

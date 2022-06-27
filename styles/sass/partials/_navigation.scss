@@ -1,5 +1,48 @@
 // Slide-out Nav
 
+.side-nav {
+    display: none;
+}
+
+input[type=checkbox]{
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    &:checked ~ .slide-out-nav {
+        transform: translateX(0%);
+    }
+}
+
+.menu-button {
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 40;
+    i {
+        color: $white;
+        font-size: 2.5rem;
+    }
+}
+
+.slide-out-nav {
+    background-color: $light-green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    opacity: 0.95;
+    transform: translateX(100%);
+    transition: 0.75s;
+    a {
+        font-size: 2rem;
+    }
+}
+
 // Desktop Nav
 
 .nav-links {
