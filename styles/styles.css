@@ -688,6 +688,25 @@ input[type=checkbox]:checked ~ .slide-out-nav {
           justify-content: center;
   gap: 3rem;
 }
+.nav-links li {
+  position: relative;
+}
+.nav-links li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #e4a436;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: width 0.35s ease 0s;
+  transition: width 0.35s ease 0s;
+}
+.nav-links li a:hover:not(.logo):after,
+.nav-links li a:focus:not(.logo):after {
+  width: 100%;
+}
 .nav-links .logo {
   font-family: "Abril Fatface", cursive;
   font-weight: normal;
@@ -697,13 +716,6 @@ input[type=checkbox]:checked ~ .slide-out-nav {
 }
 .nav-links .logo:hover, .nav-links .logo:focus {
   color: #f6f6f6;
-}
-.nav-links a {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.nav-links a:hover, .nav-links a:focus {
-  color: #e4a436;
 }
 
 .nav-home li:first-child a {

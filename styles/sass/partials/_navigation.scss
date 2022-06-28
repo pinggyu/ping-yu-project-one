@@ -57,6 +57,27 @@ input[type=checkbox]{
     justify-content: center;
     gap: 3rem;
 
+    li {
+        position: relative;
+    }
+
+    li a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $accent;
+        width: 0;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        transition: width 0.35s ease 0s;
+    }
+    li a:hover:not(.logo):after,
+    li a:focus:not(.logo):after {
+        width: 100%;
+    }
+
+
     .logo {
         font-family: $heading-font, cursive;
         font-weight: normal;
@@ -66,13 +87,6 @@ input[type=checkbox]{
         &:hover,
         &:focus {
             color: $white;
-        }
-    }
-    a {
-        transition: 0.3s;
-        &:hover,
-        &:focus {
-            color: $accent;
         }
     }
 }
