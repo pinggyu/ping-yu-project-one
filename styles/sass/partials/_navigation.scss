@@ -44,21 +44,24 @@ input[type=checkbox]{
 
 // 2. Make secondary nagivation menu slide out when hamburger menu is clicked
 
-.slide-out-menu:checked ~.slide-out-nav {
+.slide-out-menu:checked ~ .slide-out-nav {
     transform: translateX(0%);
-    .menu-button {
-        span::before {
-            transform: rotate(-90deg) translate(-8px, 0px);
-            width: 100%;
-        }
-        span {
-            transform: rotate(45deg);
-            width: 100%;
-        }
-        span::after {
-            transform: rotate(90deg) translate(-8px, 0px);
-            width: 100%;
-        }
+}
+
+.slide-out-menu:checked ~ .menu-button {
+    span::before {
+        transform: rotate(-90deg) translate(-8px, 0px);
+        width: 100%;
+    }
+
+    span {
+        transform: rotate(45deg);
+        width: 100%;
+    }
+
+    span::after {
+        transform: rotate(90deg) translate(-8px, 0px);
+        width: 100%;
     }
 }
 
