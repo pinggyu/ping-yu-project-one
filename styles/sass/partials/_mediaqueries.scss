@@ -9,15 +9,6 @@
         }
     }
 
-    .pages-header {
-        .page-cover {
-            h1 {
-                line-height: 1;
-                text-align: center;
-            }
-        }
-    }
-
     // BLOG page
     .blog-about {
         flex-direction: column;
@@ -128,6 +119,15 @@
         }
         .text-container {
             flex: 1;
+        }
+    }
+
+    .pages-header {
+        .page-cover {
+            h1 {
+                line-height: 1;
+                text-align: center;
+            }
         }
     }
 }

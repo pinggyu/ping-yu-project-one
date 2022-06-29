@@ -234,7 +234,7 @@ button {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: clamp(3rem, 9vw, 5rem);
   line-height: 5.75;
   color: #f6f6f6;
 }
@@ -292,11 +292,6 @@ body {
   }
   .slideshow img {
     width: 100%;
-  }
-
-  .pages-header .page-cover h1 {
-    line-height: 1;
-    text-align: center;
   }
 
   .blog-about {
@@ -425,6 +420,11 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+
+  .pages-header .page-cover h1 {
+    line-height: 1;
+    text-align: center;
   }
 }
 @media (max-width: 1160px) {
