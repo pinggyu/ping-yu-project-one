@@ -364,7 +364,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-bottom: 15%;
+    padding-bottom: 6rem;
   }
   .story .wrapper .img-container img {
     width: auto;
@@ -652,8 +652,48 @@ textarea {
   padding: 2.5rem 1.5rem;
 }
 
-.side-nav {
-  display: none;
+.menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 30px;
+  height: 30px;
+  z-index: 40;
+}
+
+span,
+span::before,
+span::after {
+  display: block;
+  position: absolute;
+  height: 3px;
+  background-color: #f6f6f6;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 100%;
+}
+
+span::before {
+  content: "";
+  top: -8px;
+}
+
+span::after {
+  content: "";
+  top: 8px;
 }
 
 input[type=checkbox] {
@@ -662,21 +702,29 @@ input[type=checkbox] {
   width: 1px;
   height: 1px;
 }
-input[type=checkbox]:checked ~ .slide-out-nav {
+
+.slide-out-menu:checked ~ .slide-out-nav {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
-
-.menu-button {
-  cursor: pointer;
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  z-index: 40;
+.slide-out-menu:checked ~ .slide-out-nav .menu-button span::before {
+  -webkit-transform: rotate(-90deg) translate(-8px, 0px);
+          transform: rotate(-90deg) translate(-8px, 0px);
+  width: 100%;
 }
-.menu-button i {
-  color: #f6f6f6;
-  font-size: 2.5rem;
+.slide-out-menu:checked ~ .slide-out-nav .menu-button span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+.slide-out-menu:checked ~ .slide-out-nav .menu-button span::after {
+  -webkit-transform: rotate(90deg) translate(-8px, 0px);
+          transform: rotate(90deg) translate(-8px, 0px);
+  width: 100%;
+}
+
+.side-nav {
+  display: none;
 }
 
 .slide-out-nav {

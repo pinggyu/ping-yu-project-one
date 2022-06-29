@@ -1,29 +1,71 @@
-// Slide-out Nav
+// SLIDE OUT NAV
 
-.side-nav {
-    display: none;
+// 1. Hamburger Button
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+    z-index: 40;
 }
 
+span,
+span::before,
+span::after {
+    display: block;
+    position: absolute;
+    height: 3px;
+    background-color: $white;
+    transition: all 300ms ease;
+    width: 100%;
+}
+
+span::before {
+    content: '';
+    top: -8px;
+}
+
+span::after {
+    content: '';
+    top: 8px;
+}
 input[type=checkbox]{
     opacity: 0;
     position: absolute;
     width: 1px;
     height: 1px;
-    &:checked ~ .slide-out-nav {
-        transform: translateX(0%);
+}
+
+// 2. Make secondary nagivation menu slide out when hamburger menu is clicked
+
+.slide-out-menu:checked ~.slide-out-nav {
+    transform: translateX(0%);
+    .menu-button {
+        span::before {
+            transform: rotate(-90deg) translate(-8px, 0px);
+            width: 100%;
+        }
+        span {
+            transform: rotate(45deg);
+            width: 100%;
+        }
+        span::after {
+            transform: rotate(90deg) translate(-8px, 0px);
+            width: 100%;
+        }
     }
 }
 
-.menu-button {
-    cursor: pointer;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    z-index: 40;
-    i {
-        color: $white;
-        font-size: 2.5rem;
-    }
+// 3. Style the slide-out navigation menu and hide it when in desktop view (base state)
+
+.side-nav {
+    display: none;
 }
 
 .slide-out-nav {
@@ -42,7 +84,7 @@ input[type=checkbox]{
     }
 }
 
-// Desktop Nav
+// DESKTOP NAV
 
 .main-nav {
     position: sticky;
