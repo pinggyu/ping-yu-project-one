@@ -565,7 +565,7 @@ header {
           align-items: center;
 }
 .home-hero h1 {
-  font-size: clamp(4rem, 9vw, 9rem);
+  font-size: clamp(3.5rem, 9vw, 9rem);
   line-height: 0;
   position: relative;
   right: 9%;
@@ -573,7 +573,7 @@ header {
 .home-hero .circle-text {
   position: relative;
   bottom: 1rem;
-  width: clamp(4rem, 9vw, 8rem);
+  width: clamp(3.5rem, 9vw, 8rem);
 }
 
 .portrait {
@@ -583,8 +583,8 @@ header {
   width: clamp(16rem, 42vw, 34rem);
 }
 .portrait img {
-  -webkit-box-shadow: 1.5rem 1.5rem white;
-          box-shadow: 1.5rem 1.5rem white;
+  -webkit-box-shadow: 1rem 1rem white;
+          box-shadow: 1rem 1rem white;
 }
 
 .page-cover {
@@ -853,8 +853,8 @@ input[type=checkbox] {
 .blogpost-one .img-container::after {
   content: "";
   position: absolute;
-  right: -1.5rem;
-  top: 1.5rem;
+  right: -1rem;
+  top: 1rem;
   background-color: #709b6b;
   width: 200vh;
   height: 100%;
@@ -881,8 +881,8 @@ input[type=checkbox] {
 .blogpost-two .img-container::after {
   content: "";
   position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
+  left: 1rem;
+  top: 1rem;
   background-color: #345231;
   width: 200vw;
   height: 100%;
@@ -909,9 +909,9 @@ input[type=checkbox] {
 }
 .story .img-container img {
   position: relative;
-  width: 92%;
-  -webkit-box-shadow: 1.5rem 1.5rem #709b6b;
-          box-shadow: 1.5rem 1.5rem #709b6b;
+  width: 95%;
+  -webkit-box-shadow: 1rem 1rem #709b6b;
+          box-shadow: 1rem 1rem #709b6b;
 }
 
 .full-photo {

@@ -34,7 +34,7 @@ header {
     }
     h1 {
     // using clamp to make the header font more fluid and responsive
-        font-size: clamp(4rem,9vw,9rem);
+        font-size: clamp(3.5rem,9vw,9rem);
         line-height: 0;
         position: relative;
         right: 9%;
@@ -42,7 +42,7 @@ header {
     .circle-text {
         position: relative;
         bottom: 1rem;
-        width: clamp(4rem, 9vw, 8rem);
+        width: clamp(3.5rem, 9vw, 8rem);
     }
 }
 
@@ -52,7 +52,7 @@ header {
     right: 2%;
     width: clamp(16rem, 42vw, 34rem);
     img {
-        box-shadow: 1.5rem 1.5rem white;
+        box-shadow: 1rem 1rem white;
     }
 }
 
