@@ -12,7 +12,7 @@
     right: 2rem;
     width: 30px;
     height: 30px;
-    z-index: 40;
+    z-index: $z-hamburger;
 }
 
 span,
@@ -78,7 +78,7 @@ input[type=checkbox]{
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 30;
+    z-index: $z-sidenav;
     opacity: 0.95;
     transform: translateX(100%);
     transition: 0.75s;
@@ -88,13 +88,6 @@ input[type=checkbox]{
 }
 
 // DESKTOP NAV
-
-.main-nav {
-    position: sticky;
-    top: 0;
-    background-color: $dark-green;
-    z-index: 40;
-}
 
 .nav-links {
     display: flex;

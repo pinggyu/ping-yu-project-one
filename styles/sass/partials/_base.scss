@@ -1,7 +1,17 @@
+// wrapper for individual sections
 .wrapper {
     max-width: 1260px;
     width: 90%;
     margin: 0 auto;
+}
+
+// wrapper over entire page for footer placement
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: $white;
 }
 
 .more-button, .submit-button {

@@ -7,7 +7,7 @@
     font-family: $body-font, sans-serif;
     background-color: $white;
     color: $black;
-    z-index: 50;
+    z-index: $z-skiplink;
     height: 4rem;
     padding: 0.5rem;
 }
