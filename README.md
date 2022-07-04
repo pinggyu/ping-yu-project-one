@@ -1,5 +1,7 @@
 # Juno Project 1: Multi-page Site (Willow)
 
+**View live site [here](https://willowblog.netlify.app/).**
+
 ## Objective
 To convert a given design into a multi-page, functional, responsive website and present technical wins/ challenges. 
 
@@ -43,4 +45,4 @@ I used `::after` to create a pseudo-element for the images. In order to have the
 I opted for Option B) as it required the least amount of code (no additional media queries) and hiding the overflow works with this specific website design as it did not affect other core elements. 
 
 ### 2. Reducing media queries & SCSS nesting levels
-Since I first built the website based on the desktop design, I noticed that there were several media queries that were simply overwriting desktop properties. I also ran into some issues where media queries were not applied due to specificity and had to change how I target specific elements by nesting SCSS selectors several levels deep. A better approach would be building the website from a mobile-first approach and using min-width media queries (instead of max-width) to add complexity in bigger screens, instead of reversing details in smaller screens. 
+Since I first built the website based on the desktop design, I noticed that there were several media queries that were simply overwriting desktop properties. I also ran into some issues where media queries were not applied due to specificity and had to change how I target specific elements by nesting SCSS selectors several levels deep. A better approach would be building the website from a mobile-first approach and using `min-width` media queries (instead of `max-width`) to add complexity in bigger screens, instead of reversing details in smaller screens. 
