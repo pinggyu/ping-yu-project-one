@@ -221,12 +221,22 @@ template {
   overflow: hidden;
 }
 
+/* =========================
+ *  Font family
+ * ======================== */
+/* =========================
+ *  Font colors
+ * ======================== */
+/* =========================
+ *  Z-index values
+ * ======================== */
+/* =========================
+ *  Headers and paragraphs
+ * ======================== */
 h1,
 h2,
 h3,
-h4,
-.more-button,
-button {
+h4 {
   font-family: "Abril Fatface", cursive;
   font-weight: normal;
   text-transform: uppercase;
@@ -255,6 +265,19 @@ h4 {
   color: #1f1f1f;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 0px;
+  color: #1f1f1f;
+}
+
+/* =========================
+ *  Links & buttons
+ * ======================== */
 .nav-links a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -267,23 +290,41 @@ h4 {
 }
 
 .more-button, button {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
   font-size: 1.25rem;
   text-align: center;
   line-height: 2rem;
   color: #1f1f1f;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: normal;
-  font-size: clamp(1.125rem, 3vw, 1.25rem);
-  text-align: center;
-  line-height: 2rem;
-  letter-spacing: 0px;
-  color: #1f1f1f;
-}
-
+/* =========================
+ *  Break-point: 600px
+ * ======================== */
 @media (max-width: 600px) {
+  .blogpost .blogpost-one {
+    padding-top: 6rem;
+  }
+  .blogpost .blogpost-one .img-container {
+    bottom: 0;
+    left: 0;
+  }
+  .blogpost .blogpost-one .img-container::after {
+    width: 100%;
+  }
+  .blogpost .blogpost-two {
+    gap: 0;
+  }
+  .blogpost .blogpost-two .img-container {
+    top: 0;
+    right: 0;
+  }
+  .blogpost .blogpost-two .img-container::after {
+    width: 100%;
+  }
+
   .slideshow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -316,6 +357,9 @@ body {
             flex-direction: column;
   }
 }
+/* =========================
+ *  Break-point: 900px
+ * ======================== */
 @media (max-width: 900px) {
   .home-header .wrapper {
     display: -webkit-box;
@@ -332,6 +376,12 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
+  }
+  .home-header .wrapper .home-hero h1 {
+    font-size: clamp(3.6rem, 12vw, 9rem);
+  }
+  .home-header .wrapper .home-hero .circle-text {
+    width: clamp(3.6rem, 12vw, 9rem);
   }
 
   .home-hero {
@@ -434,6 +484,9 @@ body {
     text-align: center;
   }
 }
+/* =========================
+ *  Break-point: 1160px
+ * ======================== */
 @media (max-width: 1160px) {
   .blog {
     -webkit-box-align: center;
@@ -523,11 +576,9 @@ h4 {
   padding: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
+/* =========================
+ *  Skip-link
+ * ======================== */
 .skip-link {
   position: absolute;
   left: 50%;
@@ -550,6 +601,9 @@ body {
           transform: translateY(0%);
 }
 
+/* =========================
+ *  Homepage Header
+ * ======================== */
 header {
   background-color: #345231;
 }
@@ -594,6 +648,9 @@ header {
           box-shadow: 1rem 1rem white;
 }
 
+/* =========================
+ *  Pages Header
+ * ======================== */
 .page-cover {
   background-size: cover;
   background-repeat: no-repeat;
@@ -619,17 +676,12 @@ header {
   line-height: 0;
 }
 
-footer {
-  background-color: #1f1f1f;
+.contact-header .page-cover {
+  background-image: url(../assets/contact-image-1.jpg);
 }
-footer .copyright {
-  text-align: center;
-  padding: 10px 0px;
-  color: #f6f6f6;
-  font-family: "Montserrat", sans-serif;
-}
-footer p {
-  margin: 0;
+
+.blog-header .page-cover {
+  background-image: url(../assets/blog-image-1.jpg);
 }
 
 .contact-form {
@@ -668,6 +720,9 @@ textarea {
   padding: 2.5rem 1.5rem;
 }
 
+/* =========================
+ *  Slide-Out Nav
+ * ======================== */
 .menu-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -762,6 +817,9 @@ input[type=checkbox] {
   font-size: 2rem;
 }
 
+/* =========================
+ *  Desktop Nav
+ * ======================== */
 .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,11 +874,17 @@ input[type=checkbox] {
   color: #e4a436;
 }
 
+/* =========================
+ *  HOMEPAGE - About section
+ * ======================== */
 .about {
   background-color: #f6f6f6;
-  padding: 9rem 0rem 10rem 0rem;
+  padding: 8rem 0;
 }
 
+/* =========================
+ * HOMEPAGE - Blogposts section
+ * ======================== */
 .blogpost .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -897,6 +961,9 @@ input[type=checkbox] {
   z-index: 10;
 }
 
+/* =========================
+ * HOMEPAGE - Story section
+ * ======================== */
 .story {
   background-color: #f6f6f6;
   padding: 8rem 0rem 6rem 0rem;
@@ -922,6 +989,9 @@ input[type=checkbox] {
           box-shadow: 1rem 1rem #709b6b;
 }
 
+/* =========================
+ * HOMEPAGE - Gallery section
+ * ======================== */
 .full-photo {
   height: 35vh;
   background-image: url(../assets/home-image-5.jpg);
@@ -941,6 +1011,9 @@ input[type=checkbox] {
   gap: 1.5rem;
 }
 
+/* =========================
+ * HOMEPAGE - Features section
+ * ======================== */
 .features {
   padding: 5rem 0rem 2.5rem 0rem;
   background-color: #f6f6f6;
@@ -976,9 +1049,28 @@ input[type=checkbox] {
   padding: 1rem;
 }
 
+/* =========================
+ * Pages (Blog, Contact)
+ * ======================== */
 .page-main {
   background-color: #f6f6f6;
   padding: 6rem 0;
+}
+
+/* =========================
+ * Footer
+ * ======================== */
+footer {
+  background-color: #1f1f1f;
+}
+footer .copyright {
+  text-align: center;
+  padding: 10px 0px;
+  color: #f6f6f6;
+  font-family: "Montserrat", sans-serif;
+}
+footer p {
+  margin: 0;
 }
 
 .contact-header .page-cover {
@@ -1026,10 +1118,6 @@ input[type=checkbox] {
 .socials-info .address {
   font-style: normal;
   padding-top: 1rem;
-}
-
-.blog-header .page-cover {
-  background-image: url(../assets/blog-image-1.jpg);
 }
 
 .blog-main {

@@ -1,7 +1,35 @@
 // 3 breakpoints determined based on design/ content: 600px, 900px & 1160px
 
+/* =========================
+ *  Break-point: 600px
+ * ======================== */
+
 @media (max-width: 600px){
 
+    // HOME - Blog Posts Section
+    .blogpost {
+        .blogpost-one {
+            padding-top: 6rem;
+            .img-container {
+                bottom: 0;
+                left: 0;
+            }
+            .img-container::after {
+                width: 100%;
+            }
+        }
+    .blogpost-two {
+        gap: 0;
+        .img-container {
+            top: 0;
+            right: 0;
+        }
+        .img-container::after {
+            width: 100%;
+        }
+    }
+}
+    
     // HOME - Gallery Section
 
     .slideshow {
@@ -30,11 +58,14 @@
 
 }
 
+/* =========================
+ *  Break-point: 900px
+ * ======================== */
+
 @media (max-width: 900px) {
     
     // HOME - Header Section
-
-    // set min header height
+    // set min header height & header font
 
     .home-header {
         .wrapper {
@@ -43,6 +74,14 @@
             justify-content: center;
             align-items: center;
             height: 100%;
+            .home-hero {
+                h1 {
+                    font-size: clamp(3.6rem, 12vw, 9rem);
+                }
+                .circle-text {
+                    width: clamp(3.6rem, 12vw, 9rem);
+                }
+            }
         }
     }
 
@@ -138,6 +177,10 @@
         }
     }
 }
+
+/* =========================
+ *  Break-point: 1160px
+ * ======================== */
 
 @media (max-width: 1160px) {
 

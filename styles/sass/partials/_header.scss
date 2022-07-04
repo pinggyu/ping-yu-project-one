@@ -1,3 +1,7 @@
+/* =========================
+ *  Skip-link
+ * ======================== */
+
 // Skip link to skip to main content, hidden unless focused
 .skip-link {
     position: absolute;
@@ -16,7 +20,9 @@
     transform: translateY(0%);
 }
 
-// Header base
+/* =========================
+ *  Homepage Header
+ * ======================== */
 
 header {
     background-color: $dark-green;
@@ -56,8 +62,9 @@ header {
     }
 }
 
-// Pages
-
+/* =========================
+ *  Pages Header
+ * ======================== */
 
 .page-cover {
     background-size: cover;
@@ -76,4 +83,19 @@ header {
         line-height: 0;
     }
 }
+
+// Contact page
+.contact-header {
+    .page-cover {
+        background-image: url(../assets/contact-image-1.jpg);
+    }
+}
+
+// Blog page
+.blog-header {
+    .page-cover {
+        background-image: url(../assets/blog-image-1.jpg);
+    }
+}
+
 

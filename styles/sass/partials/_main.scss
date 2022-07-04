@@ -1,14 +1,17 @@
-// About section
+/* =========================
+ *  HOMEPAGE - About section
+ * ======================== */
 
 .about {
     background-color: $white;
-    padding: 9rem 0rem 10rem 0rem;
+    padding: 8rem 0;
 }
 
-// Blog posts section
+/* =========================
+ * HOMEPAGE - Blogposts section
+ * ======================== */
 
 .blogpost{
-    // padding: 3.5rem 0rem;
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -30,7 +33,6 @@
     .img-container {
         flex-shrink: 0;
         position: relative;
-        // top: -6.5rem;
         bottom: 3rem;
         left: -0.6rem;
         img {
@@ -79,7 +81,9 @@
     }
 }
 
-// Story section
+/* =========================
+ * HOMEPAGE - Story section
+ * ======================== */
 
 .story {
     background-color: $white;
@@ -102,7 +106,9 @@
     }
 }
 
-// Gallery section
+/* =========================
+ * HOMEPAGE - Gallery section
+ * ======================== */
 
 .full-photo {
     height: 35vh;
@@ -119,7 +125,9 @@
     gap: 1.5rem;
 }
 
-// Features section
+/* =========================
+ * HOMEPAGE - Features section
+ * ======================== */
 
 .features {
     padding: 5rem 0rem 2.5rem 0rem;
@@ -149,9 +157,30 @@
     }
 }
 
-// Pages section
+/* =========================
+ * Pages (Blog, Contact)
+ * ======================== */
 
 .page-main {
     background-color: $white;
     padding: 6rem 0;
 }
+
+/* =========================
+ * Footer
+ * ======================== */
+
+ footer {
+     background-color: $black;
+
+     .copyright {
+         text-align: center;
+         padding: 10px 0px;
+         color: $white;
+         font-family: $body-font, sans-serif;
+     }
+
+     p {
+         margin: 0;
+     }
+ }
