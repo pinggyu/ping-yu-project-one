@@ -93,6 +93,14 @@ input[type=checkbox]{
  *  Desktop Nav
  * ======================== */
 
+.main-nav {
+    background-color: $dark-green;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $z-mainnav;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -116,11 +124,11 @@ input[type=checkbox]{
         bottom: 0;
         transition: width 0.35s ease 0s;
     }
+
     li a:hover:not(.logo):after,
     li a:focus:not(.logo):after {
         width: 100%;
     }
-
 
     .logo {
         font-family: $heading-font, cursive;

@@ -392,7 +392,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 8rem;
   }
 
   .main-nav {
@@ -621,6 +620,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  padding-top: 4rem;
 }
 .home-hero .header-title {
   display: -webkit-box;
@@ -825,6 +825,14 @@ input[type=checkbox] {
 /* =========================
  *  Desktop Nav
  * ======================== */
+.main-nav {
+  background-color: #345231;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+}
+
 .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
