@@ -42,7 +42,7 @@ header {
     .circle-text {
         position: relative;
         bottom: 1rem;
-        width: clamp(3.5rem, 9vw, 8rem);
+        width: clamp(3.5rem, 9vw, 9rem);
     }
 }
 
@@ -50,7 +50,7 @@ header {
     position: relative;
     top: 4rem;
     right: 2%;
-    width: clamp(16rem, 42vw, 34rem);
+    width: clamp(16rem, 42vw, 32rem);
     img {
         box-shadow: 1rem 1rem white;
     }
