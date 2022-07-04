@@ -375,7 +375,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
   }
   .home-header .wrapper .home-hero h1 {
     font-size: clamp(3.6rem, 12vw, 9rem);
@@ -623,7 +622,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 .home-hero .header-title {
   display: -webkit-box;
