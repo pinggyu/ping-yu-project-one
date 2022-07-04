@@ -576,14 +576,19 @@ h4 {
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* =========================
  *  Skip-link
  * ======================== */
 .skip-link {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -592,7 +597,7 @@ h4 {
   background-color: #f6f6f6;
   color: #1f1f1f;
   z-index: 50;
-  height: 4rem;
+  height: 3rem;
   padding: 0.5rem;
 }
 
@@ -708,7 +713,7 @@ input,
 textarea {
   border: none;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  font-size: 1.25rem;
   width: 100%;
 }
 

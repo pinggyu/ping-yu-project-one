@@ -38,6 +38,7 @@ h4 {
 body {
     font-family: $body-font, sans-serif;
     font-weight: normal;
+    // set base font to 18px on smaller screens and 20px on desktop for accessibility, assuming most default browsers have 16px default font size
     font-size: clamp(1.125rem, 3vw, 1.25rem);
     text-align: center;
     line-height: 2rem;

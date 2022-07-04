@@ -6,13 +6,14 @@
 .skip-link {
     position: absolute;
     left: 50%;
-    transform: translateY(-100%);
+    // set at -150% as the text still shows on screen in very small screen sizes with -100%
+    transform: translateY(-150%);
     transition: transform 0.3s;
     font-family: $body-font, sans-serif;
     background-color: $white;
     color: $black;
     z-index: $z-skiplink;
-    height: 4rem;
+    height: 3rem;
     padding: 0.5rem;
 }
 
