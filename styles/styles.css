@@ -1073,10 +1073,6 @@ footer p {
   margin: 0;
 }
 
-.contact-header .page-cover {
-  background-image: url(../assets/contact-image-1.jpg);
-}
-
 .contact-main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
