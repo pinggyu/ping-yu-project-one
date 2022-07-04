@@ -33,7 +33,7 @@
     .img-container {
         flex-shrink: 0;
         position: relative;
-        bottom: 3rem;
+        bottom: 2.5rem;
         left: -0.6rem;
         img {
             position: relative;
@@ -87,7 +87,7 @@
 
 .story {
     background-color: $white;
-    padding: 8rem 0rem 6rem 0rem;
+    padding: 8rem 0;
     .wrapper {
         display: flex;
         gap: 7%;
@@ -121,7 +121,7 @@
 .slideshow {
     display: flex;
     justify-content: space-between;
-    padding: 5rem 0rem;
+    padding: 8rem 0rem;
     gap: 1.5rem;
 }
 
@@ -130,7 +130,7 @@
  * ======================== */
 
 .features {
-    padding: 5rem 0rem 2.5rem 0rem;
+    padding: 8rem 0rem 5rem 0rem;
     background-color: $white;
 }
 

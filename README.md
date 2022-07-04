@@ -42,5 +42,5 @@ I used `::after` to create a pseudo-element for the images. In order to have the
 
 I opted for Option B) as it required the least amount of code (no additional media queries) and hiding the overflow works with this specific website design as it did not affect other core elements. 
 
-### 2. Reducing media queries
-Since I first built the website based on the desktop design, I noticed that there were several media queries that were simply overwriting desktop properties. I also ran into some issues where media queries were not applied due to specificity and had to change how I target specific elements. This results in more code written. A better approach could be building the website from a mobile-first approach and using min-width media queries (instead of max-width) to add complexity in bigger screens, instead of reversing details in smaller screens. 
+### 2. Reducing media queries & SCSS nesting levels
+Since I first built the website based on the desktop design, I noticed that there were several media queries that were simply overwriting desktop properties. I also ran into some issues where media queries were not applied due to specificity and had to change how I target specific elements by nesting SCSS selectors several levels deep. A better approach would be building the website from a mobile-first approach and using min-width media queries (instead of max-width) to add complexity in bigger screens, instead of reversing details in smaller screens. 

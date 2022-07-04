@@ -383,6 +383,9 @@ body {
   .home-header .wrapper .home-hero .circle-text {
     width: clamp(3.6rem, 12vw, 9rem);
   }
+  .home-header .wrapper .home-hero .portrait {
+    top: 2rem;
+  }
 
   .home-hero {
     -webkit-box-orient: vertical;
@@ -660,7 +663,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 30vh;
+  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -713,7 +716,7 @@ input,
 textarea {
   border: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
   width: 100%;
 }
 
@@ -857,8 +860,8 @@ input[type=checkbox] {
   height: 3px;
   left: 0;
   bottom: 0;
-  -webkit-transition: width 0.35s ease 0s;
-  transition: width 0.35s ease 0s;
+  -webkit-transition: width 0.25s ease 0s;
+  transition: width 0.25s ease 0s;
 }
 .nav-links li a:hover:not(.logo):after,
 .nav-links li a:focus:not(.logo):after {
@@ -870,9 +873,6 @@ input[type=checkbox] {
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
   font-size: 2.625rem;
-}
-.nav-links .logo:hover, .nav-links .logo:focus {
-  color: #f6f6f6;
 }
 
 .nav-home li:first-child a {
@@ -928,7 +928,7 @@ input[type=checkbox] {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  bottom: 3rem;
+  bottom: 2.5rem;
   left: -0.6rem;
 }
 .blogpost-one .img-container img {
@@ -979,7 +979,7 @@ input[type=checkbox] {
  * ======================== */
 .story {
   background-color: #f6f6f6;
-  padding: 8rem 0rem 6rem 0rem;
+  padding: 8rem 0;
 }
 .story .wrapper {
   display: -webkit-box;
@@ -1020,7 +1020,7 @@ input[type=checkbox] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5rem 0rem;
+  padding: 8rem 0rem;
   gap: 1.5rem;
 }
 
@@ -1028,7 +1028,7 @@ input[type=checkbox] {
  * HOMEPAGE - Features section
  * ======================== */
 .features {
-  padding: 5rem 0rem 2.5rem 0rem;
+  padding: 8rem 0rem 5rem 0rem;
   background-color: #f6f6f6;
 }
 

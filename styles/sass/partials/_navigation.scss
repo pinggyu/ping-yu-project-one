@@ -122,7 +122,7 @@ input[type=checkbox]{
         height: 3px;
         left: 0;
         bottom: 0;
-        transition: width 0.35s ease 0s;
+        transition: width 0.25s ease 0s;
     }
 
     li a:hover:not(.logo):after,
@@ -136,11 +136,6 @@ input[type=checkbox]{
         text-transform: uppercase;
         letter-spacing: 0.0625rem;
         font-size: 2.625rem;
-        // don't add a hover effect over the logo but still link to home
-        &:hover,
-        &:focus {
-            color: $white;
-        }
     }
 }
 
