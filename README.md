@@ -32,6 +32,8 @@ One consideration with using `clamp()` is to ensure that the user can still scal
 ### 2. CSS only nagivation menu
 I used CSS only to create a hamburger menu and slide-out navigation menu for smaller screen sizes. The hamburger menu was created with a `span` tag inside a `label` tag that is linked to a `checkbox input`. The 3 horizontal lines that form the hamburger menu are created using `span` and `span::before` and `span::after`. Those pseudo-elements allow content to be inserted without needing to be in HTML. When a user clicks on the menu and the checkbox is checked, the 3 lines rotate in a way that a "X" closing button is formed and the navigation menu slides out simultaneously. 
 
+One issue I ran into with this CSS only design is that if the user selects "About" while on the homepage, the page scrolls to the "About" section but the mobile nav menu remains on screen and has to be closed manually with "X". This could be resolved with some Javascript.
+
 ## Technical Challenges
 
 ### 1. Responsive box shadow effect
