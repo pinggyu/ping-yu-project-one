@@ -699,12 +699,6 @@ header {
   gap: 1.5rem;
 }
 
-.status {
-  color: #345231;
-  padding-top: 1rem;
-  text-align: center;
-}
-
 input,
 textarea {
   border: none;
@@ -719,6 +713,17 @@ input {
 
 textarea {
   padding: 2.5rem 1.5rem;
+}
+
+.status p {
+  color: #345231;
+  padding-top: 1rem;
+  text-align: center;
+  visibility: hidden;
+}
+
+.status.success p {
+  visibility: visible;
 }
 
 /* =========================

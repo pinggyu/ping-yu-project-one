@@ -10,12 +10,6 @@
     }
 }
 
-.status {
-    color: $dark-green;
-    padding-top: 1rem;
-    text-align: center
-}
-
 input,
 textarea {
     border: none;
@@ -30,4 +24,17 @@ input {
 
 textarea {
     padding: 2.5rem 1.5rem;
+}
+
+// success message
+.status p {
+    color: #345231;
+    padding-top: 1rem;
+    text-align: center;
+    visibility: hidden;
+}
+
+// success message
+.status.success p {
+    visibility: visible;
 }

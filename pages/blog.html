@@ -162,21 +162,24 @@
                         <form action="" class="comment-form" id="comment-form">
                             <div class="name-email">
                                 <label for="name" class="sr-only">Name</label>
-                                <input type="text" id="name" placeholder="Name" required>
+                                <input type="text" id="name" placeholder="Name">
                         
                                 <label for="email" class="sr-only">Email Address</label>
-                                <input type="email" id="email" placeholder="Email address" required>
+                                <input type="email" id="email" placeholder="Email address">
                             </div>
                         
                             <label for="comment" class="sr-only">Comment</label>
-                            <textarea id="comment" cols="30" rows="10" placeholder="Comment" required></textarea>
+                            <textarea id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
                         
                             <button type="submit" class="submit-button">Post Comment</button>
                         </form>
 
                         <!-- form validation -->
-                        <div id="status">
-                        
+                        <div class="status" id="status">
+                            <p id="statusText">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Success! Your comment has been sent for approval.
+                            </p>
                         </div>
                     </div>
                 </section>

@@ -4,8 +4,7 @@
 
 /* ===============================================
 * Form Submission 
-* - error handling/ form validation: name is a string, all fields that are required have been filled 
-* - success message & clear form
+* - success message upon submit
 * ==============================================*/
 
 const username = document.getElementById('name');
@@ -20,40 +19,20 @@ if (contactForm){
 }
 
 function handleContact(e) {
-
-    // let errorMsg = [];
     e.preventDefault();
 
-    // if (username.value === '' || username.value == null){
-    //     errorMsg.push(`Please enter your name.`);
-    // }
-    
-    // if (email.value === '' || email.value == null){
-    //     errorMsg.push(`Please enter a valid email.`);
-    // }
-    
-    // if (message.value === '' || message.value == null) {
-    //     errorMsg.push(`Please enter a message.`);
-    // }
-    
-    // if (errorMsg.length > 0) {
-    //     // prevent page from submitting if there's an error
-    //     statusBox.innerText = errorMsg.join (` `);
-    // } else {
-    statusMsg = "Success! Your message has been sent.";
-    statusBox.style.cssText = "color: #345231; padding-top: 1rem; text-align: center";
-    statusBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${statusMsg}`;
+    // print success message
+    statusBox.className = 'status success';
 
     // reset the form inputs
     username.value = "";
     email.value = "";
     message.value = "";
-    // }
 }
 
 /* ===============================================
 * Comment Submission 
-* - add a comment on the Blog page
+* - success message upon submit
 * ==============================================*/
 
 const commentForm = document.getElementById('comment-form');
@@ -65,9 +44,10 @@ if (commentForm){
 function handleComment(e) {
     e.preventDefault();
 
-    statusMsg = "Success! Your comment has been sent for approval.";
-    statusBox.style.cssText = "color: #345231; padding-top: 1rem; text-align: center";
-    statusBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${statusMsg}`;
+console.log(statusBox);
+
+    // print success message
+    statusBox.className = 'status success';
 
     // reset the form inputs
     username.value = "";
