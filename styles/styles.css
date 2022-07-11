@@ -324,7 +324,6 @@ body {
   .blogpost .blogpost-two .img-container::after {
     width: 100%;
   }
-
   .slideshow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -334,7 +333,6 @@ body {
   .slideshow img {
     width: 100%;
   }
-
   .blog-about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -342,14 +340,12 @@ body {
             flex-direction: column;
     text-align: center;
   }
-
   .comments .content-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   .name-email {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -385,7 +381,6 @@ body {
   .home-header .wrapper .home-hero .portrait {
     top: 2rem;
   }
-
   .home-hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -395,15 +390,12 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-
   .main-nav {
     display: none;
   }
-
   .home-header .side-nav, .pages-header .side-nav {
     display: block;
   }
-
   .story .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -425,7 +417,6 @@ body {
   .story .wrapper .text-container {
     text-align: center;
   }
-
   .features .feature-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -444,7 +435,6 @@ body {
   .features .feature-list .feature-item {
     width: 100%;
   }
-
   .page-main .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -459,7 +449,6 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
   .blog-about {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -479,7 +468,6 @@ body {
         -ms-flex: 1;
             flex: 1;
   }
-
   .pages-header .page-cover h1 {
     line-height: 1;
     text-align: center;
@@ -494,7 +482,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-
   .blogpost-one {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -504,7 +491,6 @@ body {
   .blogpost-one .text-container {
     text-align: center;
   }
-
   .blogpost-two {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -691,7 +677,8 @@ header {
   background-image: url(../assets/blog-image-1.jpg);
 }
 
-.contact-form {
+.contact-form,
+.comment-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -704,11 +691,18 @@ header {
       -ms-flex: 2.5;
           flex: 2.5;
 }
-.contact-form .name-email {
+.contact-form .name-email,
+.comment-form .name-email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
+}
+
+.status {
+  color: #345231;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 input,

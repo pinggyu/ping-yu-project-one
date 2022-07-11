@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
+    <!-- JS Script, load after body -->
+    <script defer src="../script.js"></script>
     <title>Willow - Contact</title>
 </head>
 <body>
@@ -95,21 +97,28 @@
                     </address>
                 </div>
                 <!-- Form -->
-                <form action="" class="contact-form page-content">
-                    <div class="name-email">
-                        <!-- text in label tag for screen readers only -->
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" id="name" placeholder="Name">
-        
-                        <label for="email" class="sr-only">Email Address</label>
-                        <input type="email" id="email" placeholder="Email address">
+                <div class="form-container">
+                    <form action="" class="contact-form page-content" id="contact-form">
+                        <div class="name-email">
+                            <!-- text in label tag for screen readers only -->
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" id="name" placeholder="Name" required>
+            
+                            <label for="email" class="sr-only">Email Address</label>
+                            <input type="email" id="email" placeholder="Email address" required>
+                        </div>
+            
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+            
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+
+                    <!-- form validation -->
+                    <div id="status">
+
                     </div>
-        
-                    <label for="message" class="sr-only">Message</label>
-                    <textarea id="message" cols="30" rows="10" placeholder="Message"></textarea>
-        
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
+                </div>
             </div>
         
         </main>

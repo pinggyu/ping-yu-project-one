@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
+    <!-- JS Script, load after body -->
+    <script defer src="../script.js"></script>
     <title>Willow - Blog</title>
 </head>
 <body>
@@ -156,20 +158,27 @@
                     </div>
 
                     <!-- Form -->
-                    <form action="" class="contact-form">
-                        <div class="name-email">
-                            <label for="name" class="sr-only">Name</label>
-                            <input type="text" id="name" placeholder="Name">
-                    
-                            <label for="email" class="sr-only">Email Address</label>
-                            <input type="email" id="email" placeholder="Email address">
+                    <div class="form-container">
+                        <form action="" class="comment-form" id="comment-form">
+                            <div class="name-email">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" placeholder="Name" required>
+                        
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input type="email" id="email" placeholder="Email address" required>
+                            </div>
+                        
+                            <label for="comment" class="sr-only">Comment</label>
+                            <textarea id="comment" cols="30" rows="10" placeholder="Comment" required></textarea>
+                        
+                            <button type="submit" class="submit-button">Post Comment</button>
+                        </form>
+
+                        <!-- form validation -->
+                        <div id="status">
+                        
                         </div>
-                    
-                        <label for="comment" class="sr-only">Comment</label>
-                        <textarea id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
-                    
-                        <button type="submit" class="submit-button">Post Comment</button>
-                    </form>
+                    </div>
                 </section>
             </div>
 
@@ -181,6 +190,6 @@
         </footer>
 
     </div> <!-- Closing div for page wrapper -->
-    
+
 </body>
 </html>
