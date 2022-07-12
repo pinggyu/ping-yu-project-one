@@ -79,3 +79,15 @@ function handleComment(e) {
     comment.value = "";
     }
 }
+
+/* ===============================================
+ * Side Navigation Menu
+ * - fix bug where the nav does not close when about is clicked while on the homepage (index.js)
+ * ==============================================*/
+
+const about = document.getElementById('about-side-nav');
+const sideNav = document.getElementById('slide-out-nav');
+
+about.addEventListener('click', (e) => {
+    sideNav.style.transform = "translateX(100%)";
+});
