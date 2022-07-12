@@ -3,102 +3,114 @@
  * - next step: make mobile responsive by only showing 1 carousel image preview (likely target the one with firstIndex)
  * ==============================================*/
 
-// load images objects with their respective attributes into an array
-let images = [];
-images[0] = {
-    src: "./assets/home-image-6.jpg",
-    alt: "An empty road with looming fog"
-};
-images[1] = {
-    src: "./assets/home-image-7.jpg",
-    alt: "A bowl of uncut lemons with a plate of cut lemons"
-};
-images[2] = {
-    src: "./assets/home-image-8.jpg",
-    alt: "A wooden staircase with a trendy navy and gold wallpaper" 
-};
-images[3] = {
-    src: "./assets/home-image-9.jpg",
-    alt: "A single lotus flower"
-};
+// get URL and only execute gallery carousel code if on homepage - to refactor this with an init function
+const url = new URL(window.location.href);
 
-const slideShow = document.getElementById('slideshow');
-const leftButton = document.getElementById('slideshow-btn-left');
-const rightButton = document.getElementById('slideshow-btn-right');
+console.log(url);
 
-let firstIndex = 0;
+if (url.pathname === '/') {
 
-// display images
-showImages();
+    // load images objects with their respective attributes into an array
+    let images = [];
+    images[0] = {
+        src: "./assets/home-image-6.jpg",
+        alt: "An empty road with looming fog"
+    };
+    images[1] = {
+        src: "./assets/home-image-7.jpg",
+        alt: "A bowl of uncut lemons with a plate of cut lemons"
+    };
+    images[2] = {
+        src: "./assets/home-image-8.jpg",
+        alt: "A wooden staircase with a trendy navy and gold wallpaper" 
+    };
+    images[3] = {
+        src: "./assets/home-image-9.jpg",
+        alt: "A single lotus flower"
+    };
 
-// LEFT BUTTON 
-    // current 012, 123 
-    // current 123, 230
-    // current 230, 301
-    // current 301, 012
+    const slideShow = document.getElementById('slideshow');
+    const leftButton = document.getElementById('slideshow-btn-left');
+    const rightButton = document.getElementById('slideshow-btn-right');
 
-// RIGHT BUTTON
-    // current 012, 301 
-    // current 123, 012
-    // current 230, 123
-    // current 301, 230
+    let firstIndex = 0;
 
-rightButton.addEventListener('click', (e) => {
-    slideShow.innerHTML = "";
+    // display images
+    showImages();
 
-    if (firstIndex === 0) {
-        firstIndex = 3;
-    } else {
-        firstIndex--;
-    } 
+    // LEFT BUTTON 
+        // current 012, 123 
+        // current 123, 230
+        // current 230, 301
+        // current 301, 012
 
-    let imgIndex = firstIndex;
+    // RIGHT BUTTON
+        // current 012, 301 
+        // current 123, 012
+        // current 230, 123
+        // current 301, 230
 
-    for (let i = 0; i < 3; i++) {
-        createImages(imgIndex);
-        if (imgIndex === 3) {
-            imgIndex = 0;
+  
+    rightButton.addEventListener('click', (e) => {
+        slideShow.innerHTML = "";
+
+        if (firstIndex === 0) {
+            firstIndex = 3;
         } else {
-            imgIndex++;
+            firstIndex--;
+        } 
+
+        let imgIndex = firstIndex;
+
+        for (let i = 0; i < 3; i++) {
+            createImages(imgIndex);
+            if (imgIndex === 3) {
+                imgIndex = 0;
+            } else {
+                imgIndex++;
+            }
+        }
+    });
+
+
+
+    leftButton.addEventListener('click', (e) => {
+        slideShow.innerHTML = "";
+        if (firstIndex === 3) {
+            firstIndex = 0;
+        } else {
+            firstIndex++;
+        }
+
+        let imgIndex = firstIndex;
+
+        for (let i = 0; i < 3; i++) {
+            createImages(imgIndex);
+            if (imgIndex === 3) {
+                imgIndex = 0;
+            } else {
+                imgIndex++;
+            }
+        }
+    });
+  
+
+    function showImages(){
+        for (let i = 0; i < 3; i++) {
+            createImages(i);
         }
     }
-});
 
-leftButton.addEventListener('click', (e) => {
-    slideShow.innerHTML = "";
-    if (firstIndex === 3) {
-        firstIndex = 0;
-    } else {
-        firstIndex++;
+    function createImages(index){
+        let imgContainer = document.createElement('li');
+        let img = document.createElement('img');
+        img.setAttribute('src', images[index].src);
+        img.setAttribute('alt', images[index].alt);
+        imgContainer.appendChild(img);
+        slideShow.appendChild(imgContainer);
     }
 
-    let imgIndex = firstIndex;
-
-    for (let i = 0; i < 3; i++) {
-        createImages(imgIndex);
-        if (imgIndex === 3) {
-            imgIndex = 0;
-        } else {
-            imgIndex++;
-        }
-    }
-});
-
-function showImages(){
-    for (let i = 0; i < 3; i++) {
-        createImages(i);
-    }
 }
-
-function createImages(index){
-    let imgContainer = document.createElement('li');
-    let img = document.createElement('img');
-    img.setAttribute('src', images[index].src);
-    img.setAttribute('alt', images[index].alt);
-    imgContainer.appendChild(img);
-    slideShow.appendChild(imgContainer);
-}
-
 /* ===============================================
 * Form Submission 
 * - email validation only as fields are already mandatory through the "required" attribute with html
