@@ -1034,6 +1034,9 @@ input[type=checkbox] {
   background-color: white;
   border: none;
 }
+.slideshow-btn:hover {
+  color: #e4a436;
+}
 
 .slideshow {
   display: -webkit-box;
@@ -1053,6 +1056,8 @@ input[type=checkbox] {
 .slideshow img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* =========================

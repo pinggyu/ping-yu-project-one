@@ -45,13 +45,11 @@ showImages();
 rightButton.addEventListener('click', (e) => {
     slideShow.innerHTML = "";
 
-    if (currentIndex === 3) {
-        currentIndex = 0;
+    if (currentIndex === 0) {
+        currentIndex = 3;
     } else {
-        currentIndex++;
-    }
-
-    console.log(currentIndex);
+        currentIndex--;
+    } 
 
     let j = currentIndex;
 
@@ -62,37 +60,39 @@ rightButton.addEventListener('click', (e) => {
         img.setAttribute('alt', images[j].alt);
         imgContainer.appendChild(img);
         slideShow.appendChild(imgContainer);
-        if (j === 0) {
-            j = 3;
+        if (j === 3) {
+            j = 0;
         } else {
-            j--;
+            j++;
         }
     }
 });
 
 leftButton.addEventListener('click', (e) => {
     slideShow.innerHTML = "";
-    if (currentIndex === 0) {
-        currentIndex = 3;
+    if (currentIndex === 3) {
+        currentIndex = 0;
     } else {
-        currentIndex--;
+        currentIndex++;
     }
 
-    console.log(currentIndex);
+    console.log("current" + currentIndex);
 
     let j = currentIndex;
 
     for (let i = 0; i < 3; i++) {
+
+        console.log(j);
         let imgContainer = document.createElement('li');
         let img = document.createElement('img');
         img.setAttribute('src', images[j].src);
         img.setAttribute('alt', images[j].alt);
         imgContainer.appendChild(img);
         slideShow.appendChild(imgContainer);
-        if (j === 0) {
-            j = 3;
+        if (j === 3) {
+            j = 0;
         } else {
-            j--;
+            j++;
         }
     }
 });

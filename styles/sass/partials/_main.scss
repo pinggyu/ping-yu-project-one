@@ -129,6 +129,9 @@
 .slideshow-btn {
     background-color: white;
     border: none;
+    &:hover {
+        color: $accent;
+    }
 }
 
 .slideshow {
@@ -142,6 +145,7 @@
     img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 }
 
