@@ -1,12 +1,12 @@
 /* ===============================================
  * Gallery Carousel
- * - next step: make mobile responsive by only showing 1 carousel image preview (likely target the one with firstIndex)
+ * - to do: make mobile responsive by only showing 1 carousel image preview (likely target the one with firstIndex)
+ * - to do: add animations
+ * - to do: refactor code with init function
  * ==============================================*/
 
-// get URL and only execute gallery carousel code if on homepage - to refactor this with an init function
+// get URL and only execute gallery carousel code if on homepage 
 const url = new URL(window.location.href);
-
-console.log(url);
 
 if (url.pathname === '/') {
 
