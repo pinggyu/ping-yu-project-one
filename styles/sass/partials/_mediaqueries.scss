@@ -39,6 +39,16 @@
         }
     }
 
+    .slideshow-btn {
+        display: none;
+    }
+
+    .gallery {
+        .wrapper {
+            justify-content: center;
+        }
+    }
+
     // BLOG page
     .blog-about {
         flex-direction: column;

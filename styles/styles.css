@@ -333,6 +333,14 @@ body {
   .slideshow img {
     width: 100%;
   }
+  .slideshow-btn {
+    display: none;
+  }
+  .gallery .wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .blog-about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

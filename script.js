@@ -1,5 +1,6 @@
 /* ===============================================
  * Gallery Carousel
+ * - next step: make mobile responsive by only showing 1 carousel image preview (likely target the one with firstIndex)
  * ==============================================*/
 
 // load images objects with their respective attributes into an array
@@ -17,26 +18,26 @@ images[2] = {
     alt: "A wooden staircase with a trendy navy and gold wallpaper" 
 };
 images[3] = {
-    src: "./assets/home-image-4.jpg",
-    alt: "A woman wearing a yellow rainjacket surrounded by plants and trees"
+    src: "./assets/home-image-9.jpg",
+    alt: "A single lotus flower"
 };
 
 const slideShow = document.getElementById('slideshow');
 const leftButton = document.getElementById('slideshow-btn-left');
 const rightButton = document.getElementById('slideshow-btn-right');
 
-let currentIndex = 0;
+let firstIndex = 0;
 
-// display images based on current Index
+// display images
 showImages();
 
-// LEFT
+// LEFT BUTTON 
     // current 012, 123 
     // current 123, 230
     // current 230, 301
     // current 301, 012
 
-// RIGHT
+// RIGHT BUTTON
     // current 012, 301 
     // current 123, 012
     // current 230, 123
@@ -45,67 +46,57 @@ showImages();
 rightButton.addEventListener('click', (e) => {
     slideShow.innerHTML = "";
 
-    if (currentIndex === 0) {
-        currentIndex = 3;
+    if (firstIndex === 0) {
+        firstIndex = 3;
     } else {
-        currentIndex--;
+        firstIndex--;
     } 
 
-    let j = currentIndex;
+    let imgIndex = firstIndex;
 
     for (let i = 0; i < 3; i++) {
-        let imgContainer = document.createElement('li');
-        let img = document.createElement('img');
-        img.setAttribute('src', images[j].src);
-        img.setAttribute('alt', images[j].alt);
-        imgContainer.appendChild(img);
-        slideShow.appendChild(imgContainer);
-        if (j === 3) {
-            j = 0;
+        createImages(imgIndex);
+        if (imgIndex === 3) {
+            imgIndex = 0;
         } else {
-            j++;
+            imgIndex++;
         }
     }
 });
 
 leftButton.addEventListener('click', (e) => {
     slideShow.innerHTML = "";
-    if (currentIndex === 3) {
-        currentIndex = 0;
+    if (firstIndex === 3) {
+        firstIndex = 0;
     } else {
-        currentIndex++;
+        firstIndex++;
     }
 
-    console.log("current" + currentIndex);
-
-    let j = currentIndex;
+    let imgIndex = firstIndex;
 
     for (let i = 0; i < 3; i++) {
-
-        console.log(j);
-        let imgContainer = document.createElement('li');
-        let img = document.createElement('img');
-        img.setAttribute('src', images[j].src);
-        img.setAttribute('alt', images[j].alt);
-        imgContainer.appendChild(img);
-        slideShow.appendChild(imgContainer);
-        if (j === 3) {
-            j = 0;
+        createImages(imgIndex);
+        if (imgIndex === 3) {
+            imgIndex = 0;
         } else {
-            j++;
+            imgIndex++;
         }
     }
 });
 
 function showImages(){
     for (let i = 0; i < 3; i++) {
-        let imgContainer = document.createElement('li');
-        let img = document.createElement('img');
-        img.setAttribute('src', images[i].src);
-        img.setAttribute('alt', images[i].alt);
-        imgContainer.appendChild(img);
-        slideShow.appendChild(imgContainer);
+        createImages(i);
     }
+}
+
+function createImages(index){
+    let imgContainer = document.createElement('li');
+    let img = document.createElement('img');
+    img.setAttribute('src', images[index].src);
+    img.setAttribute('alt', images[index].alt);
+    imgContainer.appendChild(img);
+    slideShow.appendChild(imgContainer);
 }
 
 /* ===============================================
