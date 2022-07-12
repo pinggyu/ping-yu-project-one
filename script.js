@@ -2,8 +2,11 @@
  * Gallery Carousel
  * ==============================================*/
 
+
+
 /* ===============================================
 * Form Submission 
+* - email validation only as fields are already mandatory through the "required" attribute with html
 * - success message upon submit
 * ==============================================*/
 
@@ -13,6 +16,7 @@ const message = document.getElementById('message');
 const comment = document.getElementById('comment');
 const contactForm = document.getElementById('contact-form');
 const statusBox = document.getElementById('status');
+const statusText = document.getElementById('statusText');
 
 if (contactForm){
     contactForm.addEventListener('submit', handleContact);
@@ -21,6 +25,13 @@ if (contactForm){
 function handleContact(e) {
     e.preventDefault();
 
+    // email validation
+    if(!isEmail(email.value)){
+        statusText.textContent = `Invalid email. Please enter your email again.`;
+        statusBox.className = 'status error';
+
+    }else {
+
     // print success message
     statusBox.className = 'status success';
 
@@ -28,10 +39,17 @@ function handleContact(e) {
     username.value = "";
     email.value = "";
     message.value = "";
+    }
+}
+
+// valid email checker using a regular expression (regex from: http://jsfiddle.net/ghvj4gy9/)
+function isEmail(email){
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 /* ===============================================
 * Comment Submission 
+* - email validation only as fields are already mandatory through the "required" attribute with html
 * - success message upon submit
 * ==============================================*/
 
@@ -44,7 +62,13 @@ if (commentForm){
 function handleComment(e) {
     e.preventDefault();
 
-console.log(statusBox);
+    // email validation
+
+    if (!isEmail(email.value)) {
+        statusText.textContent = `Invalid email. Please enter your email again.`;
+        statusBox.className = 'status error';
+
+    }else {
 
     // print success message
     statusBox.className = 'status success';
@@ -53,4 +77,5 @@ console.log(statusBox);
     username.value = "";
     email.value = "";
     comment.value = "";
+    }
 }

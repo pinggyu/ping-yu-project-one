@@ -716,7 +716,6 @@ textarea {
 }
 
 .status p {
-  color: #345231;
   padding-top: 1rem;
   text-align: center;
   visibility: hidden;
@@ -724,6 +723,16 @@ textarea {
 
 .status.success p {
   visibility: visible;
+  color: #345231;
+}
+
+.status.error p {
+  visibility: visible;
+  color: red;
+}
+
+.status.error i {
+  visibility: hidden;
 }
 
 /* =========================
