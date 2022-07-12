@@ -1020,6 +1020,21 @@ input[type=checkbox] {
   background-repeat: no-repeat;
 }
 
+.gallery .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.slideshow-btn {
+  background-color: white;
+  border: none;
+}
+
 .slideshow {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1029,6 +1044,15 @@ input[type=checkbox] {
           justify-content: space-between;
   padding: 8rem 0rem;
   gap: 1.5rem;
+}
+.slideshow li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.slideshow img {
+  height: 100%;
+  width: 100%;
 }
 
 /* =========================

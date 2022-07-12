@@ -118,11 +118,31 @@
     background-repeat: no-repeat;
 }
 
+.gallery {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+.slideshow-btn {
+    background-color: white;
+    border: none;
+}
+
 .slideshow {
     display: flex;
     justify-content: space-between;
     padding: 8rem 0rem;
     gap: 1.5rem;
+    li {
+        flex: 1;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 /* =========================

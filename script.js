@@ -2,7 +2,111 @@
  * Gallery Carousel
  * ==============================================*/
 
+// load images objects with their respective attributes into an array
+let images = [];
+images[0] = {
+    src: "./assets/home-image-6.jpg",
+    alt: "An empty road with looming fog"
+};
+images[1] = {
+    src: "./assets/home-image-7.jpg",
+    alt: "A bowl of uncut lemons with a plate of cut lemons"
+};
+images[2] = {
+    src: "./assets/home-image-8.jpg",
+    alt: "A wooden staircase with a trendy navy and gold wallpaper" 
+};
+images[3] = {
+    src: "./assets/home-image-4.jpg",
+    alt: "A woman wearing a yellow rainjacket surrounded by plants and trees"
+};
 
+const slideShow = document.getElementById('slideshow');
+const leftButton = document.getElementById('slideshow-btn-left');
+const rightButton = document.getElementById('slideshow-btn-right');
+
+let currentIndex = 0;
+
+// display images based on current Index
+showImages();
+
+// LEFT
+    // current 012, 123 
+    // current 123, 230
+    // current 230, 301
+    // current 301, 012
+
+// RIGHT
+    // current 012, 301 
+    // current 123, 012
+    // current 230, 123
+    // current 301, 230
+
+rightButton.addEventListener('click', (e) => {
+    slideShow.innerHTML = "";
+
+    if (currentIndex === 3) {
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+
+    console.log(currentIndex);
+
+    let j = currentIndex;
+
+    for (let i = 0; i < 3; i++) {
+        let imgContainer = document.createElement('li');
+        let img = document.createElement('img');
+        img.setAttribute('src', images[j].src);
+        img.setAttribute('alt', images[j].alt);
+        imgContainer.appendChild(img);
+        slideShow.appendChild(imgContainer);
+        if (j === 0) {
+            j = 3;
+        } else {
+            j--;
+        }
+    }
+});
+
+leftButton.addEventListener('click', (e) => {
+    slideShow.innerHTML = "";
+    if (currentIndex === 0) {
+        currentIndex = 3;
+    } else {
+        currentIndex--;
+    }
+
+    console.log(currentIndex);
+
+    let j = currentIndex;
+
+    for (let i = 0; i < 3; i++) {
+        let imgContainer = document.createElement('li');
+        let img = document.createElement('img');
+        img.setAttribute('src', images[j].src);
+        img.setAttribute('alt', images[j].alt);
+        imgContainer.appendChild(img);
+        slideShow.appendChild(imgContainer);
+        if (j === 0) {
+            j = 3;
+        } else {
+            j--;
+        }
+    }
+});
+
+function showImages(){
+    for (let i = 0; i < 3; i++) {
+        let imgContainer = document.createElement('li');
+        let img = document.createElement('img');
+        img.setAttribute('src', images[i].src);
+        img.setAttribute('alt', images[i].alt);
+        imgContainer.appendChild(img);
+        slideShow.appendChild(imgContainer);
+    }
+}
 
 /* ===============================================
 * Form Submission 
@@ -80,14 +184,3 @@ function handleComment(e) {
     }
 }
 
-/* ===============================================
- * Side Navigation Menu
- * - fix bug where the nav does not close when about is clicked while on the homepage (index.js)
- * ==============================================*/
-
-const about = document.getElementById('about-side-nav');
-const sideNav = document.getElementById('slide-out-nav');
-
-about.addEventListener('click', (e) => {
-    sideNav.style.transform = "translateX(100%)";
-});
