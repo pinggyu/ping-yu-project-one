@@ -1,5 +1,5 @@
 /* ===============================================
- * Gallery Carousel
+ * Gallery Carousel (loops through an array of images)
  * - to do: make mobile responsive by only showing 1 carousel image preview (likely target the one with firstIndex)
  * - to do: add animations
  * - to do: refactor code with init function
@@ -8,7 +8,8 @@
 // get URL and only execute gallery carousel code if on homepage 
 const url = new URL(window.location.href);
 
-if (url.pathname === '/') {
+if (url.pathname === '/Users/pingyu/sites/juno/juno-project-one/index.html') {
+    // for testing on local: /Users/pingyu/sites/juno/juno-project-one/index.html
 
     // load images objects with their respective attributes into an array
     let images = [];
@@ -29,14 +30,13 @@ if (url.pathname === '/') {
         alt: "A single lotus flower"
     };
 
+    // ul element
     const slideShow = document.getElementById('slideshow');
+    // side scrolling buttons
     const leftButton = document.getElementById('slideshow-btn-left');
     const rightButton = document.getElementById('slideshow-btn-right');
 
     let firstIndex = 0;
-
-    // display images
-    showImages();
 
     // LEFT BUTTON 
         // current 012, 123 
@@ -50,9 +50,9 @@ if (url.pathname === '/') {
         // current 230, 123
         // current 301, 230
 
-  
     rightButton.addEventListener('click', (e) => {
-        slideShow.innerHTML = "";
+        slideShow.textContent = '';
+        console.log(slideShow);
 
         if (firstIndex === 0) {
             firstIndex = 3;
@@ -72,10 +72,8 @@ if (url.pathname === '/') {
         }
     });
 
-
-
     leftButton.addEventListener('click', (e) => {
-        slideShow.innerHTML = "";
+        slideShow.textContent = '';
         if (firstIndex === 3) {
             firstIndex = 0;
         } else {
@@ -93,13 +91,6 @@ if (url.pathname === '/') {
             }
         }
     });
-  
-
-    function showImages(){
-        for (let i = 0; i < 3; i++) {
-            createImages(i);
-        }
-    }
 
     function createImages(index){
         let imgContainer = document.createElement('li');
@@ -134,12 +125,13 @@ function handleContact(e) {
 
     // email validation
     if(!isEmail(email.value)){
+        statusText.innerHTML = '';
         statusText.textContent = `Invalid email. Please enter your email again.`;
         statusBox.className = 'status error';
-
     }else {
 
     // print success message
+    statusText.innerHTML = `<i class="fa-solid fa-circle-check" aria-hidden="true"></i> Success! Your comment has been sent for approval.`;
     statusBox.className = 'status success';
 
     // reset the form inputs
@@ -172,12 +164,13 @@ function handleComment(e) {
     // email validation
 
     if (!isEmail(email.value)) {
+        statusText.innerHTML = '';
         statusText.textContent = `Invalid email. Please enter your email again.`;
         statusBox.className = 'status error';
 
     }else {
-
     // print success message
+    statusText.innerHTML = `<i class="fa-solid fa-circle-check" aria-hidden="true"></i> Success! Your comment has been sent for approval.`;
     statusBox.className = 'status success';
 
     // reset the form inputs
