@@ -131,7 +131,7 @@ function handleContact(e) {
     }else {
 
     // print success message
-    statusText.innerHTML = `<i class="fa-solid fa-circle-check" aria-hidden="true"></i> Success! Your comment has been sent for approval.`;
+    statusText.innerHTML = `<i class="fa-solid fa-circle-check" aria-hidden="true"></i> Success! Your message has been sent.`;
     statusBox.className = 'status success';
 
     // reset the form inputs
