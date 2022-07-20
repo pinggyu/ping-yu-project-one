@@ -5,10 +5,9 @@
  * - to do: refactor code with init function
  * ==============================================*/
 
-// get URL and only execute gallery carousel code if on homepage 
-const url = new URL(window.location.href);
+// only execute gallery carousel code if on homepage 
 
-if ((url.pathname === 'https://willowblog.netlify.app/') || (url.pathname === 'https://willowblog.netlify.app/#about')) {
+if (window.location.pathname == '/') {
 
     // load images objects with their respective attributes into an array
     let images = [];
