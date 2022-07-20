@@ -8,8 +8,7 @@
 // get URL and only execute gallery carousel code if on homepage 
 const url = new URL(window.location.href);
 
-if (url.pathname === '/Users/pingyu/sites/juno/juno-project-one/index.html') {
-    // for testing on local: /Users/pingyu/sites/juno/juno-project-one/index.html
+if ((url.pathname === 'https://willowblog.netlify.app/') || (url.pathname === 'https://willowblog.netlify.app/#about')) {
 
     // load images objects with their respective attributes into an array
     let images = [];
