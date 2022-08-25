@@ -29,7 +29,7 @@ I used `clamp()` on some headers (e.g. H1 on main page) to allow the font size t
 
 One consideration with using `clamp()` is to ensure that the user can still scale the text to 200% of its original value as it would otherwise be a WCAG failure under [1.4.4 Resize text (AA)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F94.html). It can be tested by zooming across different device sizes, browsers and viewport sizes.
 
-### 2. CSS only nagivation menu
+### 2. CSS only navigation menu
 I used CSS only to create a hamburger menu and slide-out navigation menu for smaller screen sizes. The hamburger menu was created with a `span` tag inside a `label` tag that is linked to a `checkbox input`. The 3 horizontal lines that form the hamburger menu are created using `span` and `span::before` and `span::after`. Those pseudo-elements allow content to be inserted without needing to be in HTML. When a user clicks on the menu and the checkbox is checked, the 3 lines rotate in a way that a "X" closing button is formed and the navigation menu slides out simultaneously. 
 
 One issue I ran into with this CSS only design is that if the user selects "About" while on the homepage, the page scrolls to the "About" section but the mobile nav menu remains on screen and has to be closed manually with "X". This could be resolved with some Javascript.
